@@ -1,5 +1,73 @@
 {
   "schema_version": 1,
-  "materials": []
+  "materials": [
+    {
+      "material": "lead",
+      "status": "implemented_pending_runtime_validation",
+      "canonical_provider": "tfmg",
+      "canonical_items": {
+        "ore": [
+          "tfmg:lead_ore",
+          "tfmg:deepslate_lead_ore"
+        ],
+        "raw_material": "tfmg:raw_lead",
+        "raw_storage_block": "tfmg:raw_lead_block",
+        "ingot": "tfmg:lead_ingot",
+        "nugget": "tfmg:lead_nugget",
+        "plate": "tfmg:lead_sheet",
+        "storage_block": "tfmg:lead_block"
+      },
+      "equivalence_tags": {
+        "ore": "c:ores/lead",
+        "raw_material": "c:raw_materials/lead",
+        "raw_storage_block": "c:storage_blocks/raw_lead",
+        "ingot": "c:ingots/lead",
+        "nugget": "c:nuggets/lead",
+        "plate": "c:plates/lead",
+        "storage_block": "c:storage_blocks/lead"
+      },
+      "legacy_items": {
+        "cgs:lead_ore": "tfmg:lead_ore",
+        "cgs:deepslate_lead_ore": "tfmg:deepslate_lead_ore",
+        "cgs:raw_lead": "tfmg:raw_lead",
+        "cgs:raw_lead_block": "tfmg:raw_lead_block",
+        "cgs:lead_ingot": "tfmg:lead_ingot",
+        "cgs:lead_nugget": "tfmg:lead_nugget",
+        "cgs:lead_block": "tfmg:lead_block"
+      },
+      "functional_exceptions": [
+        {
+          "item": "cgs:lead_balls",
+          "reason": "Create: Gunsmithing ammunition component; not a generic material form"
+        }
+      ],
+      "worldgen": {
+        "enabled_provider": "tfmg",
+        "enabled_feature": "tfmg:lead_ore",
+        "disabled_modifier": "cgs:add_lead_ore",
+        "strategy": "Override the CGS add_features modifier with neoforge:remove_features",
+        "affects_existing_chunks": false
+      },
+      "normalization": {
+        "recipe_outputs": "Replace legacy CGS material outputs with their TFMG equivalents",
+        "legacy_conversion": "One-way 1:1 stonecutting recipes",
+        "create_ore_excavation": "Produce tfmg:raw_lead while preserving the CGS vein definition",
+        "legacy_ore_loot": "Drop tfmg:raw_lead without changing CGS Silk Touch behavior"
+      },
+      "evidence": {
+        "static_audit": "catalog/materials/lead.audit.json",
+        "design_document": "docs/materials/lead-policy.md"
+      },
+      "runtime_validation": [
+        "KubeJS loads without errors",
+        "CGS lead worldgen is absent from newly generated chunks",
+        "TFMG lead worldgen remains active",
+        "CGS legacy material forms convert one-way at a 1:1 ratio",
+        "CGS ammunition recipes still accept common lead nuggets",
+        "Create Ore Excavation produces tfmg:raw_lead",
+        "No compacting or decompacting loop multiplies material"
+      ]
+    }
+  ]
 }
 

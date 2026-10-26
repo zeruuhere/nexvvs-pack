@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:remove_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "cgs:lead_ore_placed",
+  "steps": [
+    "underground_ores"
+  ]
+}

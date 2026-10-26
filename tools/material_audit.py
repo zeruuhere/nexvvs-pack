@@ -114,20 +114,21 @@ def scan_data_directory(data_directory: Path) -> tuple[list[TagFragment], list[s
     if not data_directory.is_dir():
         return fragments, issues
     for path in sorted(data_directory.rglob("*.json")):
-        resource_path = path.relative_to(data_directory).as_posix()
+        relative_path = path.relative_to(data_directory).as_posix()
+        resource_path = f"data/{relative_path}"
         tag_id = tag_id_from_resource(resource_path)
         if not tag_id:
             continue
         try:
             payload = json.loads(path.read_text(encoding="utf-8"))
         except (OSError, UnicodeDecodeError, json.JSONDecodeError) as error:
-            issues.append(f"overrides/kubejs/data/{resource_path}: {error}")
+            issues.append(f"overrides/kubejs/data/{relative_path}: {error}")
             continue
         fragments.append(
             TagFragment(
                 tag_id=tag_id,
                 values=tag_values(payload),
-                source=f"overrides/kubejs/data/{resource_path}",
+                source=f"overrides/kubejs/data/{relative_path}",
                 replace=bool(payload.get("replace", False)),
             )
         )

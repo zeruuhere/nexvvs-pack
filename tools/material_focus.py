@@ -235,7 +235,8 @@ def scan_overlay_recipes(
         return recipes, worldgen, issues
     for path in sorted(data_directory.rglob("*.json")):
         relative = path.relative_to(data_directory).as_posix()
-        if not recipe_id(relative) and not is_worldgen_resource(relative):
+        resource_path = f"data/{relative}"
+        if not recipe_id(resource_path) and not is_worldgen_resource(resource_path):
             continue
         try:
             raw_text = path.read_text(encoding="utf-8")
@@ -243,7 +244,7 @@ def scan_overlay_recipes(
             issues.append(f"overrides/kubejs/data/{relative}: {error}")
             continue
         if not raw_resource_may_match(
-            raw_text, relative, material, items, tags, providers
+            raw_text, resource_path, material, items, tags, providers
         ):
             continue
         try:
@@ -252,13 +253,13 @@ def scan_overlay_recipes(
             issues.append(f"overrides/kubejs/data/{relative}: {error}")
             continue
         source = "overrides/kubejs/data"
-        if recipe_id(relative):
+        if recipe_id(resource_path):
             analyzed = analyze_recipe(
-                source, relative, payload, material, items, tags, providers
+                source, resource_path, payload, material, items, tags, providers
             )
             if analyzed:
                 recipes.append(analyzed)
-        if is_worldgen_resource(relative):
+        if is_worldgen_resource(resource_path):
             references = sorted(
                 {
                     value
@@ -267,14 +268,14 @@ def scan_overlay_recipes(
                 }
             )
             if references or (
-                relative.split("/", 2)[1] in providers
-                and contains_material_token(relative, material)
+                resource_path.split("/", 2)[1] in providers
+                and contains_material_token(resource_path, material)
             ):
                 worldgen.append(
                     {
-                        "resource": relative,
+                        "resource": resource_path,
                         "source": source,
-                        "namespace": relative.split("/", 2)[1],
+                        "namespace": resource_path.split("/", 2)[1],
                         "type": payload.get("type", "unknown"),
                         "references": references,
                         "definition": payload,
@@ -338,6 +339,31 @@ def provider_coverage(material_entry: dict[str, Any]) -> dict[str, dict[str, Any
     }
 
 
+def apply_overlay_precedence(
+    archive_resources: list[dict[str, Any]],
+    overlay_resources: list[dict[str, Any]],
+    key: str,
+    kind: str,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    effective = list(archive_resources)
+    overrides: list[dict[str, Any]] = []
+    for overlay in overlay_resources:
+        identifier = overlay[key]
+        replaced = [resource for resource in effective if resource[key] == identifier]
+        effective = [resource for resource in effective if resource[key] != identifier]
+        effective.append(overlay)
+        if replaced:
+            overrides.append(
+                {
+                    "kind": kind,
+                    "id": identifier,
+                    "source": overlay["source"],
+                    "replaced_sources": sorted({resource["source"] for resource in replaced}),
+                }
+            )
+    return effective, overrides
+
+
 def build_material_focus(
     material_entry: dict[str, Any],
     mods_directory: Path,
@@ -352,13 +378,23 @@ def build_material_focus(
     overlay_recipes, overlay_worldgen, overlay_issues = scan_overlay_recipes(
         overlay_data_directory, material, items, tags, providers
     )
+    effective_recipes, recipe_overrides = apply_overlay_precedence(
+        jar_recipes, overlay_recipes, "id", "recipe"
+    )
+    effective_worldgen, worldgen_overrides = apply_overlay_precedence(
+        jar_worldgen, overlay_worldgen, "resource", "worldgen"
+    )
     recipes = sorted(
-        [*jar_recipes, *overlay_recipes],
+        effective_recipes,
         key=lambda recipe: (recipe["id"], recipe["source"], recipe["resource"]),
     )
     worldgen = sorted(
-        [*jar_worldgen, *overlay_worldgen],
+        effective_worldgen,
         key=lambda resource: (resource["namespace"], resource["resource"], resource["source"]),
+    )
+    overrides = sorted(
+        [*recipe_overrides, *worldgen_overrides],
+        key=lambda override: (override["kind"], override["id"]),
     )
     role_counts = Counter(recipe["role"] for recipe in recipes)
     namespace_recipe_counts = Counter(recipe["id"].partition(":")[0] for recipe in recipes)
@@ -379,14 +415,17 @@ def build_material_focus(
             "worldgen_resources": len(worldgen),
             "worldgen_namespaces": worldgen_namespaces,
             "config_files": len(configs),
+            "datapack_overrides": len(overrides),
             "parse_issues": len(jar_issues) + len(overlay_issues),
         },
         "recipes": recipes,
         "worldgen": worldgen,
         "config_references": configs,
+        "datapack_overrides": overrides,
         "parse_issues": sorted([*jar_issues, *overlay_issues]),
         "limitations": [
             "Recipes and worldgen registered only by Java code are not visible to this static audit.",
+            "KubeJS recipe-event mutations are not folded into the static recipe list.",
             "A recipe reference proves technical coupling, not that two concrete items are functionally interchangeable.",
             "Runtime registry and recipe dumps are required before disabling world generation or removing outputs.",
         ],
@@ -401,7 +440,7 @@ def markdown_focus_report(report: dict[str, Any]) -> str:
         "",
         f"> Generated by `./nexvvs materials {material}`. Do not edit manually.",
         "",
-        "This report records static evidence. No canonical item has been selected and no gameplay file has been changed.",
+        "This report records static evidence and effective datapack overrides. Canonical decisions and gameplay policy are recorded separately in `catalog/materials.json`.",
         "",
         "## Summary",
         "",
@@ -411,6 +450,7 @@ def markdown_focus_report(report: dict[str, Any]) -> str:
         f"- Worldgen resources: **{summary['worldgen_resources']}**",
         f"- Worldgen namespaces: `{', '.join(summary['worldgen_namespaces']) or 'none'}`",
         f"- Configuration files with relevant references: **{summary['config_files']}**",
+        f"- Effective datapack overrides: **{summary['datapack_overrides']}**",
         f"- Parse issues: **{summary['parse_issues']}**",
         "",
         "## Forms and candidates",
@@ -482,6 +522,17 @@ def markdown_focus_report(report: dict[str, Any]) -> str:
         lines.append("No relevant configuration keys were found.")
         lines.append("")
 
+    lines.extend(["## Effective datapack overrides", ""])
+    if report["datapack_overrides"]:
+        for override in report["datapack_overrides"]:
+            replaced = ", ".join(f"`{source}`" for source in override["replaced_sources"])
+            lines.append(
+                f"- `{override['kind']}` `{override['id']}` from `{override['source']}` replaces {replaced}."
+            )
+    else:
+        lines.append("No focused datapack override shadows an installed resource.")
+    lines.append("")
+
     provider_names = sorted(report["providers"])
     worldgen_provider_names = sorted(set(provider_names).intersection(summary["worldgen_namespaces"]))
     provider_recipe_counts = summary["recipe_namespaces"]
@@ -490,15 +541,15 @@ def markdown_focus_report(report: dict[str, Any]) -> str:
             "## Preliminary assessment",
             "",
             f"- Providers discovered: {', '.join(f'`{name}`' for name in provider_names)}.",
-            f"- Providers with static worldgen resources: {', '.join(f'`{name}`' for name in worldgen_provider_names) or 'none'}.",
+            f"- Namespaces with effective worldgen resources, including removal modifiers: {', '.join(f'`{name}`' for name in worldgen_provider_names) or 'none'}.",
             "- Recipe ownership: "
             + ", ".join(f"`{name}`={provider_recipe_counts.get(name, 0)}" for name in provider_names)
             + ".",
-            "- Canonical provider: **pending runtime validation and design approval**.",
+            "- This generated audit does not choose a canonical provider; see `catalog/materials.json` and the material policy document.",
             "",
             "## Required runtime checks",
             "",
-            "- Confirm both ore biome modifiers are active in a newly generated world.",
+            "- Confirm the intended add/remove biome modifiers produce only the selected ore in newly generated chunks.",
             "- Export the live recipe registry and compare it with this static inventory.",
             "- Test mining, smelting, blasting, compacting, decompacting, and Create processing.",
             "- Verify provider-specific tools, ammunition, machines, and advancement triggers.",

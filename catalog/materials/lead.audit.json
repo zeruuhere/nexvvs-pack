@@ -218,6 +218,7 @@
       "tfmg"
     ],
     "config_files": 1,
+    "datapack_overrides": 3,
     "parse_issues": 0
   },
   "recipes": [
@@ -240,19 +241,19 @@
     },
     {
       "id": "cgs:drilling/lead",
-      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "source": "overrides/kubejs/data",
       "resource": "data/cgs/recipes/drilling/lead.json",
       "type": "createoreexcavation:drilling",
       "role": "producer",
       "references": [
-        "cgs:raw_lead"
+        "tfmg:raw_lead"
       ],
       "matched_inputs": [],
       "matched_outputs": [
-        "cgs:raw_lead"
+        "tfmg:raw_lead"
       ],
       "all_outputs": [
-        "cgs:raw_lead"
+        "tfmg:raw_lead"
       ]
     },
     {
@@ -511,15 +512,15 @@
     },
     {
       "id": "cgs:ore_vein_type/lead",
-      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "source": "overrides/kubejs/data",
       "resource": "data/cgs/recipes/ore_vein_type/lead.json",
       "type": "createoreexcavation:vein",
       "role": "consumer",
       "references": [
-        "cgs:raw_lead"
+        "tfmg:raw_lead"
       ],
       "matched_inputs": [
-        "cgs:raw_lead"
+        "tfmg:raw_lead"
       ],
       "matched_outputs": [],
       "all_outputs": []
@@ -1794,17 +1795,19 @@
   "worldgen": [
     {
       "resource": "data/cgs/neoforge/biome_modifier/add_lead_ore.json",
-      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "source": "overrides/kubejs/data",
       "namespace": "cgs",
-      "type": "neoforge:add_features",
+      "type": "neoforge:remove_features",
       "references": [
         "cgs:lead_ore_placed"
       ],
       "definition": {
-        "type": "neoforge:add_features",
+        "type": "neoforge:remove_features",
         "biomes": "#minecraft:is_overworld",
         "features": "cgs:lead_ore_placed",
-        "step": "underground_ores"
+        "steps": [
+          "underground_ores"
+        ]
       }
     },
     {
@@ -1980,9 +1983,36 @@
       ]
     }
   ],
+  "datapack_overrides": [
+    {
+      "kind": "recipe",
+      "id": "cgs:drilling/lead",
+      "source": "overrides/kubejs/data",
+      "replaced_sources": [
+        "mods/create-gunsmithing-1.21.1-1.4.9.jar"
+      ]
+    },
+    {
+      "kind": "recipe",
+      "id": "cgs:ore_vein_type/lead",
+      "source": "overrides/kubejs/data",
+      "replaced_sources": [
+        "mods/create-gunsmithing-1.21.1-1.4.9.jar"
+      ]
+    },
+    {
+      "kind": "worldgen",
+      "id": "data/cgs/neoforge/biome_modifier/add_lead_ore.json",
+      "source": "overrides/kubejs/data",
+      "replaced_sources": [
+        "mods/create-gunsmithing-1.21.1-1.4.9.jar"
+      ]
+    }
+  ],
   "parse_issues": [],
   "limitations": [
     "Recipes and worldgen registered only by Java code are not visible to this static audit.",
+    "KubeJS recipe-event mutations are not folded into the static recipe list.",
     "A recipe reference proves technical coupling, not that two concrete items are functionally interchangeable.",
     "Runtime registry and recipe dumps are required before disabling world generation or removing outputs."
   ],

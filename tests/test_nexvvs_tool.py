@@ -160,6 +160,21 @@ class MaterialAuditTests(unittest.TestCase):
             self.assertEqual(tin["forms"]["ingot"]["candidate_count"], 2)
             self.assertTrue(tin["forms"]["ingot"]["cross_namespace_conflict"])
 
+    def test_discovers_tags_from_kubejs_data_root(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            mods = root / "mods"
+            data = root / "data"
+            mods.mkdir()
+            tag = data / "c/tags/item/ingots/tin.json"
+            tag.parent.mkdir(parents=True)
+            tag.write_text(json.dumps({"values": ["example:tin_ingot"]}), encoding="utf-8")
+
+            catalog = build_material_catalog(mods, data)
+
+            self.assertEqual(catalog["summary"]["materials"], 1)
+            self.assertEqual(catalog["materials"][0]["material"], "tin")
+
 
 class MaterialFocusTests(unittest.TestCase):
     def test_classifies_tagged_recipe_as_conversion(self):
@@ -190,6 +205,18 @@ class MaterialFocusTests(unittest.TestCase):
             mods.mkdir()
             data.mkdir()
             (instance / "config").mkdir(parents=True)
+            overlay_recipe = data / "example/recipe/tin_ingot.json"
+            overlay_recipe.parent.mkdir(parents=True)
+            overlay_recipe.write_text(
+                json.dumps(
+                    {
+                        "type": "minecraft:smelting",
+                        "ingredient": {"tag": "c:ores/tin"},
+                        "result": {"id": "example:tin_ingot"},
+                    }
+                ),
+                encoding="utf-8",
+            )
             with ZipFile(mods / "example.jar", "w") as archive:
                 archive.writestr(
                     "data/example/recipe/tin_ingot.json",
@@ -231,6 +258,56 @@ class MaterialFocusTests(unittest.TestCase):
             self.assertEqual(report["summary"]["recipes"], 1)
             self.assertEqual(report["summary"]["worldgen_resources"], 1)
             self.assertEqual(report["summary"]["worldgen_namespaces"], ["example"])
+            self.assertEqual(report["summary"]["datapack_overrides"], 1)
+            self.assertEqual(report["recipes"][0]["source"], "overrides/kubejs/data")
+
+
+class LeadPolicyTests(unittest.TestCase):
+    repository = Path(__file__).resolve().parents[1]
+
+    def test_policy_selects_tfmg_and_preserves_lead_balls(self):
+        policy = json.loads((self.repository / "catalog/materials.json").read_text())
+        lead = next(item for item in policy["materials"] if item["material"] == "lead")
+
+        self.assertEqual(lead["canonical_provider"], "tfmg")
+        self.assertEqual(lead["canonical_items"]["ingot"], "tfmg:lead_ingot")
+        self.assertIn("cgs:lead_balls", [item["item"] for item in lead["functional_exceptions"]])
+
+    def test_worldgen_override_removes_cgs_feature(self):
+        path = self.repository / "overrides/kubejs/data/cgs/neoforge/biome_modifier/add_lead_ore.json"
+        modifier = json.loads(path.read_text())
+
+        self.assertEqual(modifier["type"], "neoforge:remove_features")
+        self.assertEqual(modifier["features"], "cgs:lead_ore_placed")
+        self.assertIn("underground_ores", modifier["steps"])
+
+    def test_create_ore_excavation_produces_canonical_raw_lead(self):
+        path = self.repository / "overrides/kubejs/data/cgs/recipes/drilling/lead.json"
+        recipe = json.loads(path.read_text())
+
+        self.assertEqual(recipe["output"], [{"item": "tfmg:raw_lead"}])
+
+    def test_legacy_ore_loot_preserves_silk_touch_and_normalizes_raw_drop(self):
+        loot_root = self.repository / "overrides/kubejs/data/cgs/loot_table/blocks"
+        for filename, silk_item in (
+            ("lead_ore.json", "cgs:lead_ore"),
+            ("deepslate_lead_ore.json", "cgs:deepslate_lead_ore"),
+        ):
+            loot = json.loads((loot_root / filename).read_text())
+            children = loot["pools"][0]["entries"][0]["children"]
+            self.assertEqual(children[0]["name"], silk_item)
+            self.assertEqual(children[1]["name"], "tfmg:raw_lead")
+
+    def test_every_legacy_mapping_is_present_in_kubejs_script(self):
+        policy = json.loads((self.repository / "catalog/materials.json").read_text())
+        lead = next(item for item in policy["materials"] if item["material"] == "lead")
+        script = (
+            self.repository / "overrides/kubejs/server_scripts/nexvvs/materials/lead.js"
+        ).read_text()
+
+        for legacy, canonical in lead["legacy_items"].items():
+            self.assertIn(legacy, script)
+            self.assertIn(canonical, script)
 
 
 if __name__ == "__main__":
