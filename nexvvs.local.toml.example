@@ -1,0 +1,5 @@
+[instances]
+dev = "/absolute/path/to/CurseForge/Minecraft/Instances/NEXVVS Dev"
+stable = "/absolute/path/to/CurseForge/Minecraft/Instances/NEXVVS Stable"
+qa = "/absolute/path/to/CurseForge/Minecraft/Instances/NEXVVS QA"
+

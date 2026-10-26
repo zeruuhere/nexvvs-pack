@@ -1,0 +1,44 @@
+schema_version = 1
+
+[pack]
+name = "NEXVVS"
+version = "0.5.1"
+author = "NEXVVS Team"
+
+[platform]
+minecraft = "1.21.1"
+loader = "neoforge"
+loader_version = "21.1.264"
+java = 21
+
+[sync]
+managed_roots = [
+  "defaultconfigs",
+  "kubejs/startup_scripts",
+  "kubejs/server_scripts",
+  "kubejs/client_scripts",
+  "kubejs/data",
+  "kubejs/assets",
+]
+managed_files = [
+  "kubejs/config/common.json",
+]
+protected_roots = [
+  "mods",
+  "resourcepacks",
+  "shaderpacks",
+  "saves",
+  "logs",
+  "crash-reports",
+  "screenshots",
+  "xaero",
+  "minecraftinstance.json",
+  "options.txt",
+  "servers.dat",
+]
+
+[build]
+output_directory = "build"
+overrides_directory = "overrides"
+lock_file = "catalog/curseforge.lock.json"
+
