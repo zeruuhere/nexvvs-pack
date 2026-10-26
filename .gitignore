@@ -16,3 +16,6 @@ reports/*
 .idea/
 .vscode/
 
+# ProbeJS runtime evidence
+.probe/
+

@@ -1,0 +1,4 @@
+interface:
+  display_name: "NEXVVS KubeJS Engineering"
+  short_description: "ProbeJS-grounded KubeJS integrations for NEXVVS"
+  default_prompt: "Use ProbeJS evidence and NEXVVS safety rules to implement or review this KubeJS integration."

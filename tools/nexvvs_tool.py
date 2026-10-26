@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 import shutil
+import socket
 import subprocess
 import sys
 import tempfile
@@ -33,6 +34,28 @@ class SyncEntry:
     relative_path: PurePosixPath
     source: Path
     target: Path
+
+
+@dataclass(frozen=True)
+class ProbeMatch:
+    relative_path: PurePosixPath
+    line_number: int
+    text: str
+
+
+@dataclass(frozen=True)
+class ProbeStatus:
+    dump_root: Path
+    declaration_count: int
+    size_bytes: int
+    newest_mtime: float | None
+    missing_sections: tuple[str, ...]
+    api_state: str
+    warnings: tuple[str, ...]
+
+    @property
+    def ready(self) -> bool:
+        return self.declaration_count > 0 and not self.missing_sections
 
 
 def load_toml(path: Path) -> dict[str, Any]:
@@ -293,6 +316,185 @@ def verify_dev_instance(root: Path, project: dict[str, Any]) -> tuple[Path, dict
             f"Loader mismatch: project requires {expected_loader}, instance has {loader.get('name')}"
         )
     return instance, metadata
+
+
+def read_text_tail(path: Path, limit: int = 4 * 1024 * 1024) -> str:
+    try:
+        with path.open("rb") as handle:
+            handle.seek(0, os.SEEK_END)
+            size = handle.tell()
+            handle.seek(max(0, size - limit))
+            return handle.read().decode("utf-8", errors="replace")
+    except OSError:
+        return ""
+
+
+def probe_api_state(instance: Path) -> tuple[str, str | None]:
+    config_path = instance / "kubejs" / "config" / "web_server.json"
+    try:
+        config = json.loads(config_path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return "unconfigured", None
+    except (OSError, UnicodeDecodeError, json.JSONDecodeError) as error:
+        return "invalid-config", f"ProbeJS web-server configuration is invalid: {error}"
+
+    if not config.get("enabled"):
+        return "disabled", None
+    port = config.get("port")
+    if not isinstance(port, int) or not 1 <= port <= 65535:
+        return "invalid-config", "ProbeJS web-server port is invalid"
+    try:
+        with socket.create_connection(("127.0.0.1", port), timeout=0.25):
+            return "online", None
+    except OSError:
+        return "offline", None
+
+
+def inspect_probe_dump(instance: Path) -> ProbeStatus:
+    dump_root = instance / ".probe"
+    declarations = sorted(dump_root.rglob("*.d.ts")) if dump_root.is_dir() else []
+    size_bytes = 0
+    newest_mtime: float | None = None
+    for path in declarations:
+        try:
+            stat = path.stat()
+        except OSError:
+            continue
+        size_bytes += stat.st_size
+        newest_mtime = max(newest_mtime or stat.st_mtime, stat.st_mtime)
+
+    populated_sections = {
+        path.relative_to(dump_root).parts[0]
+        for path in declarations
+        if path.relative_to(dump_root).parts
+    }
+    expected = ("@side-only", "@package", "@special")
+    missing_sections = tuple(name for name in expected if name not in populated_sections)
+    api_state, api_warning = probe_api_state(instance)
+    warnings: list[str] = []
+    if api_warning:
+        warnings.append(api_warning)
+
+    log_tail = read_text_tail(instance / "logs" / "latest.log")
+    if (
+        "InjectParchment.transformClass" in log_tail
+        and "Illegal group reference" in log_tail
+    ):
+        warnings.append(
+            "ProbeJS 8.0.3 skipped some Parchment Javadoc; generated type declarations remain usable"
+        )
+
+    return ProbeStatus(
+        dump_root=dump_root,
+        declaration_count=len(declarations),
+        size_bytes=size_bytes,
+        newest_mtime=newest_mtime,
+        missing_sections=missing_sections,
+        api_state=api_state,
+        warnings=tuple(warnings),
+    )
+
+
+def probe_search_roots(dump_root: Path, include_special: bool) -> list[Path]:
+    roots = [dump_root / "@side-only", dump_root / "@package"]
+    if include_special:
+        roots.append(dump_root / "@special")
+    return roots
+
+
+def search_probe_declarations(
+    instance: Path,
+    query: str,
+    *,
+    limit: int = 20,
+    include_special: bool = False,
+) -> list[ProbeMatch]:
+    if not query.strip():
+        raise NexvvsError("ProbeJS type query cannot be empty")
+    if limit < 1:
+        raise NexvvsError("ProbeJS result limit must be at least 1")
+
+    dump_root = instance / ".probe"
+    if not dump_root.is_dir():
+        raise NexvvsError("ProbeJS dump is missing; generate it from the Dev profile first")
+
+    needle = query.casefold()
+    matches: list[ProbeMatch] = []
+    seen: set[Path] = set()
+    for search_root in probe_search_roots(dump_root, include_special):
+        if not search_root.is_dir():
+            continue
+        for path in sorted(search_root.rglob("*.d.ts")):
+            if path in seen:
+                continue
+            seen.add(path)
+            try:
+                lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
+            except OSError:
+                continue
+            for line_number, line in enumerate(lines, start=1):
+                if needle not in line.casefold():
+                    continue
+                text = line.strip()
+                if len(text) > 320:
+                    text = text[:317] + "..."
+                matches.append(
+                    ProbeMatch(
+                        PurePosixPath(path.relative_to(instance).as_posix()),
+                        line_number,
+                        text,
+                    )
+                )
+                if len(matches) >= limit:
+                    return matches
+    return matches
+
+
+def probe_status(root: Path = REPOSITORY_ROOT) -> int:
+    project = load_project(root)
+    instance, metadata = verify_dev_instance(root, project)
+    status = inspect_probe_dump(instance)
+    state = "READY" if status.ready else "MISSING"
+    print(f"PROBE: {state} ({metadata.get('name')})")
+    print(f"DUMP:  {status.dump_root}")
+    print(
+        f"TYPES: {status.declaration_count} declarations, "
+        f"{status.size_bytes / (1024 * 1024):.1f} MiB"
+    )
+    if status.newest_mtime is not None:
+        generated = datetime.fromtimestamp(status.newest_mtime).astimezone()
+        print(f"NEWEST: {generated.isoformat(timespec='seconds')}")
+    print(f"LIVE API: {status.api_state}")
+    for section in status.missing_sections:
+        print(f"ERROR missing .probe/{section}")
+    for warning in status.warnings:
+        print(f"WARN  {warning}")
+    return 0 if status.ready else 1
+
+
+def probe_type(
+    query: str,
+    *,
+    limit: int = 20,
+    include_special: bool = False,
+    root: Path = REPOSITORY_ROOT,
+) -> int:
+    project = load_project(root)
+    instance, _ = verify_dev_instance(root, project)
+    matches = search_probe_declarations(
+        instance,
+        query,
+        limit=limit,
+        include_special=include_special,
+    )
+    for match in matches:
+        print(f"{match.relative_path}:{match.line_number}: {match.text}")
+    if not matches:
+        special_hint = " Use --special for registry literals." if not include_special else ""
+        print(f"NO MATCH: {query!r}.{special_hint}")
+        return 1
+    print(f"MATCHES: {len(matches)} (limit {limit})")
+    return 0
 
 
 def sha256(path: Path) -> str:
@@ -674,6 +876,19 @@ def create_parser() -> argparse.ArgumentParser:
     subparsers.add_parser("audit", help="refresh the CurseForge content inventory")
     materials = subparsers.add_parser("materials", help="audit material forms and common item tags")
     materials.add_argument("material", nargs="?", help="generate a focused audit for one material")
+    probe = subparsers.add_parser("probe", help="inspect the generated ProbeJS evidence")
+    probe_subparsers = probe.add_subparsers(dest="probe_command", required=True)
+    probe_subparsers.add_parser("status", help="report dump and local live-API availability")
+    probe_type_parser = probe_subparsers.add_parser(
+        "type", help="search generated events, bindings, and Java declarations"
+    )
+    probe_type_parser.add_argument("query", help="literal symbol, class, method, or recipe type")
+    probe_type_parser.add_argument("--limit", type=int, default=20, help="maximum matches (default: 20)")
+    probe_type_parser.add_argument(
+        "--special",
+        action="store_true",
+        help="also search the large @special registry-literal tree",
+    )
     subparsers.add_parser("validate", help="validate repository-owned content")
     sync = subparsers.add_parser("sync", help="compare or deploy overrides to an instance")
     sync.add_argument("target", choices=["dev"])
@@ -689,6 +904,16 @@ def main(argv: list[str] | None = None) -> int:
             return audit_instance()
         if args.command == "materials":
             return audit_material_focus(args.material) if args.material else audit_materials()
+        if args.command == "probe":
+            if args.probe_command == "status":
+                return probe_status()
+            if args.probe_command == "type":
+                return probe_type(
+                    args.query,
+                    limit=args.limit,
+                    include_special=args.special,
+                )
+            raise NexvvsError(f"Unknown probe command: {args.probe_command}")
         if args.command == "validate":
             return 0 if validate_repository() else 1
         if args.command == "sync":

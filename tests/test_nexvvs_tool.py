@@ -8,9 +8,11 @@ from tools.nexvvs_tool import (
     NexvvsError,
     check_snbt_balance,
     collect_managed_files,
+    inspect_probe_dump,
     overlay_issues,
     plan_sync,
     safe_relative_path,
+    search_probe_declarations,
 )
 from tools.material_audit import (
     build_material_catalog,
@@ -111,6 +113,59 @@ class SnbtTests(unittest.TestCase):
             path = Path(temporary) / "quest.snbt"
             path.write_text("{ tasks: [ }", encoding="utf-8")
             self.assertIsNotNone(check_snbt_balance(path))
+
+
+class ProbeJsTests(unittest.TestCase):
+    def test_reports_complete_dump_and_known_parchment_warning(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            instance = Path(temporary)
+            declarations = {
+                "@side-only/server/events/index.d.ts": "declare const ServerEvents: object\n",
+                "@package/example/index.d.ts": "declare class Example {}\n",
+                "@special/types/index.d.ts": "type ItemId = 'minecraft:stone'\n",
+            }
+            for relative, content in declarations.items():
+                declaration = instance / ".probe" / relative
+                declaration.parent.mkdir(parents=True)
+                declaration.write_text(content, encoding="utf-8")
+            config = instance / "kubejs/config/web_server.json"
+            config.parent.mkdir(parents=True)
+            config.write_text(json.dumps({"enabled": False, "port": 0}), encoding="utf-8")
+            log = instance / "logs/latest.log"
+            log.parent.mkdir(parents=True)
+            log.write_text(
+                "InjectParchment.transformClass\nIllegal group reference\n",
+                encoding="utf-8",
+            )
+
+            status = inspect_probe_dump(instance)
+
+            self.assertTrue(status.ready)
+            self.assertEqual(status.declaration_count, 3)
+            self.assertEqual(status.api_state, "disabled")
+            self.assertEqual(len(status.warnings), 1)
+
+    def test_searches_normal_declarations_and_special_only_when_requested(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            instance = Path(temporary)
+            event = instance / ".probe/@side-only/server/events/index.d.ts"
+            special = instance / ".probe/@special/types/index.d.ts"
+            event.parent.mkdir(parents=True)
+            special.parent.mkdir(parents=True)
+            event.write_text("declare const ServerEvents: object\n", encoding="utf-8")
+            special.write_text("type ItemId = 'create:shaft'\n", encoding="utf-8")
+
+            event_matches = search_probe_declarations(instance, "ServerEvents")
+            hidden_special = search_probe_declarations(instance, "create:shaft")
+            visible_special = search_probe_declarations(
+                instance,
+                "create:shaft",
+                include_special=True,
+            )
+
+            self.assertEqual(len(event_matches), 1)
+            self.assertEqual(hidden_special, [])
+            self.assertEqual(len(visible_special), 1)
 
 
 class MaterialAuditTests(unittest.TestCase):

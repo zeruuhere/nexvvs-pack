@@ -11,6 +11,8 @@ This repository is the source of truth for NEXVVS-owned configuration, KubeJS in
 
 Never assume an API, registry ID, recipe type, tag, or mod capability exists. Verify it against the installed JARs, generated registry data, or runtime logs.
 
+Use `$nexvvs-kubejs-engineering` before implementing or reviewing KubeJS scripts, recipes, tags, events, registry builders, or cross-mod integrations.
+
 ## Product principles
 
 - Create is the primary technological system.

@@ -23,6 +23,9 @@ The Git repository contains only NEXVVS-owned integrations and curated configura
 ./nexvvs audit
 ./nexvvs materials
 ./nexvvs materials lead
+./nexvvs probe status
+./nexvvs probe type ServerEvents
+./nexvvs probe type create:pressing --special
 ./nexvvs validate
 ./nexvvs sync dev
 ./nexvvs sync dev --apply
@@ -33,6 +36,8 @@ python3 -m unittest discover -s tests -v
 - `audit` reads CurseForge metadata and refreshes the content lock and mod list. It does not modify the instance.
 - `materials` statically audits material tags inside the installed JARs and refreshes the discovered-material catalog.
 - `materials <name>` creates a focused recipe, worldgen, provider, and configuration report for one discovered material.
+- `probe status` validates the generated ProbeJS dump and reports whether its optional local live API is reachable without exposing credentials.
+- `probe type` performs a bounded, read-only search over generated declarations; `--special` opts into the large registry-literal tree.
 - `validate` checks repository structure plus JSON, TOML, SNBT balance, and JavaScript syntax.
 - `sync dev` compares the curated overrides with the Dev instance. It is a dry run unless `--apply` is supplied.
 - `build` creates a deterministic CurseForge ZIP containing `manifest.json` and `overrides/`.
