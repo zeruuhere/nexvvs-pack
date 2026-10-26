@@ -15,6 +15,8 @@ from datetime import UTC, datetime
 from pathlib import Path, PurePosixPath
 from typing import Any, Iterable
 
+from tools.material_audit import build_material_catalog, markdown_material_report
+
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 IGNORED_SOURCE_NAMES = {".DS_Store", ".gitkeep"}
@@ -511,6 +513,35 @@ def audit_instance(root: Path = REPOSITORY_ROOT) -> int:
     return 0
 
 
+def audit_materials(root: Path = REPOSITORY_ROOT) -> int:
+    project = load_project(root)
+    instance, metadata = verify_dev_instance(root, project)
+    overlay_data = root / project["build"]["overrides_directory"] / "kubejs" / "data"
+    catalog = build_material_catalog(instance / "mods", overlay_data)
+    catalog["source_profile"] = {
+        "name": metadata.get("name"),
+        "minecraft": metadata.get("gameVersion"),
+        "loader": (metadata.get("baseModLoader") or {}).get("name"),
+    }
+    catalog_path = root / "catalog" / "materials.discovered.json"
+    catalog_path.write_text(
+        json.dumps(catalog, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    documentation_path = root / "docs" / "MATERIALS.md"
+    documentation_path.write_text(markdown_material_report(catalog), encoding="utf-8")
+    summary = catalog["summary"]
+    print(
+        f"MATERIALS: {summary['materials']} materials, {summary['forms']} forms, "
+        f"{summary['cross_namespace_conflicts']} cross-mod conflicts, "
+        f"{summary['multi_item_forms']} multi-item forms, "
+        f"{summary['unresolved_forms']} unresolved forms"
+    )
+    print(f"WROTE: {catalog_path.relative_to(root)}")
+    print(f"WROTE: {documentation_path.relative_to(root)}")
+    return 0
+
+
 def zip_bytes(archive: zipfile.ZipFile, name: str, data: bytes, mode: int = 0o644) -> None:
     info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
     info.compress_type = zipfile.ZIP_DEFLATED
@@ -598,6 +629,7 @@ def create_parser() -> argparse.ArgumentParser:
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("audit", help="refresh the CurseForge content inventory")
+    subparsers.add_parser("materials", help="audit material forms and common item tags")
     subparsers.add_parser("validate", help="validate repository-owned content")
     sync = subparsers.add_parser("sync", help="compare or deploy overrides to an instance")
     sync.add_argument("target", choices=["dev"])
@@ -611,6 +643,8 @@ def main(argv: list[str] | None = None) -> int:
     try:
         if args.command == "audit":
             return audit_instance()
+        if args.command == "materials":
+            return audit_materials()
         if args.command == "validate":
             return 0 if validate_repository() else 1
         if args.command == "sync":

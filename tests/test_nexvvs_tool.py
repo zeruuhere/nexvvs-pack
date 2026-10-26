@@ -1,6 +1,7 @@
 import json
 import tempfile
 import unittest
+from zipfile import ZipFile
 from pathlib import Path, PurePosixPath
 
 from tools.nexvvs_tool import (
@@ -10,6 +11,12 @@ from tools.nexvvs_tool import (
     overlay_issues,
     plan_sync,
     safe_relative_path,
+)
+from tools.material_audit import (
+    build_material_catalog,
+    material_form,
+    resolve_tag,
+    TagFragment,
 )
 
 
@@ -103,6 +110,54 @@ class SnbtTests(unittest.TestCase):
             path = Path(temporary) / "quest.snbt"
             path.write_text("{ tasks: [ }", encoding="utf-8")
             self.assertIsNotNone(check_snbt_balance(path))
+
+
+class MaterialAuditTests(unittest.TestCase):
+    def test_normalizes_raw_storage_blocks(self):
+        self.assertEqual(
+            material_form("c:storage_blocks/raw_copper"),
+            ("copper", "raw_storage_block"),
+        )
+
+    def test_resolves_nested_tags(self):
+        fragments = {
+            "c:ingots/copper": [
+                TagFragment("c:ingots/copper", ("minecraft:copper_ingot", "#example:copper"), "a", False)
+            ],
+            "example:copper": [
+                TagFragment("example:copper", ("example:copper_ingot",), "b", False)
+            ],
+        }
+
+        items, unresolved, visited, cycles = resolve_tag("c:ingots/copper", fragments)
+
+        self.assertEqual(items, {"minecraft:copper_ingot", "example:copper_ingot"})
+        self.assertEqual(unresolved, set())
+        self.assertEqual(visited, {"c:ingots/copper", "example:copper"})
+        self.assertEqual(cycles, set())
+
+    def test_discovers_duplicate_ingots_from_jar(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            mods = root / "mods"
+            data = root / "data"
+            mods.mkdir()
+            data.mkdir()
+            with ZipFile(mods / "example.jar", "w") as archive:
+                archive.writestr(
+                    "data/c/tags/item/ingots/tin.json",
+                    json.dumps({"values": ["a:tin_ingot", "b:tin_ingot"]}),
+                )
+
+            catalog = build_material_catalog(mods, data)
+
+            self.assertEqual(catalog["summary"]["materials"], 1)
+            self.assertEqual(catalog["summary"]["multi_item_forms"], 1)
+            self.assertEqual(catalog["summary"]["cross_namespace_conflicts"], 1)
+            tin = catalog["materials"][0]
+            self.assertEqual(tin["material"], "tin")
+            self.assertEqual(tin["forms"]["ingot"]["candidate_count"], 2)
+            self.assertTrue(tin["forms"]["ingot"]["cross_namespace_conflict"])
 
 
 if __name__ == "__main__":

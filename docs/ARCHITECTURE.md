@@ -27,6 +27,10 @@ Only files intentionally authored or curated for NEXVVS belong under `overrides/
 
 Third-party binaries, player state, logs, caches, and personal preferences remain in CurseForge and never become repository source.
 
+## Material catalogs
+
+`catalog/materials.discovered.json` is generated evidence from common item tags found in installed JARs. It records material forms, candidate items, nested tags, and their source files. `catalog/materials.json` is the curated policy and remains the only place where canonical-item and progression decisions are made.
+
 ## Configuration lifecycle
 
 Root `config/` files apply at the instance level. `defaultconfigs/` seeds server configuration for new worlds, while an existing world's effective configuration normally lives under `saves/<world>/serverconfig/`. World files are always protected; an existing test world's server configuration may only be changed through a separately reviewed, explicit operation.

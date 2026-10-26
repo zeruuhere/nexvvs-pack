@@ -45,10 +45,11 @@ Never assume an API, registry ID, recipe type, tag, or mod capability exists. Ve
 ## Workflow
 
 1. Change source files in this repository.
-2. Run `./nexvvs validate` and the test suite.
-3. Inspect `./nexvvs sync dev`.
-4. Apply with `./nexvvs sync dev --apply` only after reviewing the plan.
-5. Launch the Dev profile through CurseForge and test in Minecraft.
-6. Inspect logs and document runtime-only findings.
-7. Build with `./nexvvs build` and import the ZIP as a clean QA profile before release.
+2. Refresh discovery data with `./nexvvs audit` or `./nexvvs materials` when relevant.
+3. Run `./nexvvs validate` and the test suite.
+4. Inspect `./nexvvs sync dev`.
+5. Apply with `./nexvvs sync dev --apply` only after reviewing the plan.
+6. Launch the Dev profile through CurseForge and test in Minecraft.
+7. Inspect logs and document runtime-only findings.
+8. Build with `./nexvvs build` and import the ZIP as a clean QA profile before release.
 

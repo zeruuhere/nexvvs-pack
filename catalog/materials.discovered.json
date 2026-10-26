@@ -1,0 +1,6586 @@
+{
+  "schema_version": 1,
+  "method": "static item-tag audit",
+  "summary": {
+    "jars_scanned": 340,
+    "tag_fragments": 2271,
+    "materials": 136,
+    "forms": 295,
+    "multi_item_forms": 39,
+    "cross_namespace_conflicts": 26,
+    "unresolved_forms": 3,
+    "parse_issues": 0
+  },
+  "limitations": [
+    "Static JAR resources do not include tags or items registered only by Java code at runtime.",
+    "Tag fragments using replace=true are reported conservatively because resource-pack order is not simulated.",
+    "Multiple tagged items are review candidates, not automatic proof that one item should be removed."
+  ],
+  "parse_issues": [],
+  "materials": [
+    {
+      "material": "aluminum",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/aluminum"
+          ],
+          "items": [
+            "tfmg:aluminum_ingot"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/ingots/aluminum.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/aluminum"
+          ],
+          "items": [
+            "tfmg:aluminum_nugget"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/nuggets/aluminum.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "plate": {
+          "tags": [
+            "c:plates/aluminum"
+          ],
+          "items": [
+            "tfmg:aluminum_sheet"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/plates/aluminum.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/aluminum"
+          ],
+          "items": [
+            "tfmg:aluminum_block"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/storage_blocks/aluminum.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "wire": {
+          "tags": [
+            "c:wires/aluminum"
+          ],
+          "items": [
+            "tfmg:aluminum_wire"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/wires/aluminum.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "amethyst",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/amethyst"
+          ],
+          "items": [
+            "occultism:amethyst_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/amethyst.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "andesite_alloy",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/andesite_alloy"
+          ],
+          "items": [
+            "create:andesite_alloy"
+          ],
+          "sources": [
+            "mods/Create Encased-1.21.1-1.10.0.jar!/data/c/tags/item/ingots/andesite_alloy.json",
+            "mods/createdeco-2.1.3.jar!/data/c/tags/item/ingots/andesite_alloy.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "plate": {
+          "tags": [
+            "c:plates/andesite_alloy"
+          ],
+          "items": [
+            "createcasing:andesite_sheet",
+            "createdeco:andesite_sheet"
+          ],
+          "sources": [
+            "mods/Create Encased-1.21.1-1.10.0.jar!/data/c/tags/item/plates/andesite_alloy.json",
+            "mods/createdeco-2.1.3.jar!/data/c/tags/item/plates/andesite_alloy.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "createcasing",
+            "createdeco"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/andesite_alloy"
+          ],
+          "items": [
+            "create:andesite_alloy_block"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/storage_blocks/andesite_alloy.json",
+            "mods/createdeco-2.1.3.jar!/data/c/tags/item/storage_blocks/andesite_alloy.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": true
+    },
+    {
+      "material": "ash",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/ash"
+          ],
+          "items": [
+            "supplementaries:ash"
+          ],
+          "sources": [
+            "mods/supplementaries-1.21.1-4.0.2-neoforge.jar!/data/c/tags/item/dusts/ash.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "supplementaries"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "azure_electrum",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/azure_electrum"
+          ],
+          "items": [
+            "silentgear:azure_electrum_dust"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/dusts/azure_electrum.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ingot": {
+          "tags": [
+            "c:ingots/azure_electrum"
+          ],
+          "items": [
+            "silentgear:azure_electrum_ingot"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/ingots/azure_electrum.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/azure_electrum"
+          ],
+          "items": [
+            "silentgear:azure_electrum_nugget"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/nuggets/azure_electrum.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/azure_electrum"
+          ],
+          "items": [
+            "silentgear:azure_electrum_block"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/storage_blocks/azure_electrum.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "azure_silver",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/azure_silver"
+          ],
+          "items": [
+            "silentgear:azure_silver_dust"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/dusts/azure_silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ingot": {
+          "tags": [
+            "c:ingots/azure_silver"
+          ],
+          "items": [
+            "silentgear:azure_silver_ingot"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/ingots/azure_silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/azure_silver"
+          ],
+          "items": [
+            "silentgear:azure_silver_nugget"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/nuggets/azure_silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/azure_silver"
+          ],
+          "items": [
+            "silentgear:azure_silver_ore"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/ores/azure_silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_material": {
+          "tags": [
+            "c:raw_materials/azure_silver"
+          ],
+          "items": [
+            "silentgear:raw_azure_silver"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/raw_materials/azure_silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_storage_block": {
+          "tags": [
+            "c:storage_blocks/raw_azure_silver"
+          ],
+          "items": [
+            "silentgear:raw_azure_silver_block"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/storage_blocks/raw_azure_silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/azure_silver"
+          ],
+          "items": [
+            "silentgear:azure_silver_block"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/storage_blocks/azure_silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "azurite",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/azurite"
+          ],
+          "items": [
+            "tropicraft:azurite_gem"
+          ],
+          "sources": [
+            "mods/Tropicraft-9.8.1.jar!/data/c/tags/item/gems/azurite.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tropicraft"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/azurite"
+          ],
+          "items": [
+            "tropicraft:azurite_ore"
+          ],
+          "sources": [
+            "mods/Tropicraft-9.8.1.jar!/data/c/tags/item/ores/azurite.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tropicraft"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "baronyte",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/baronyte"
+          ],
+          "items": [
+            "aoa3:baronyte_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/baronyte.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "black_quartz",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/black_quartz"
+          ],
+          "items": [
+            "actuallyadditions:black_quartz"
+          ],
+          "sources": [
+            "mods/actuallyadditions-1.3.26+mc1.21.1.jar!/data/c/tags/item/gems/black_quartz.json",
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/gems/black_quartz.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "actuallyadditions"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/black_quartz"
+          ],
+          "items": [
+            "actuallyadditions:black_quartz_ore"
+          ],
+          "sources": [
+            "mods/actuallyadditions-1.3.26+mc1.21.1.jar!/data/c/tags/item/ores/black_quartz.json",
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/black_quartz.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "actuallyadditions"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/black_quartz"
+          ],
+          "items": [
+            "actuallyadditions:black_quartz_block"
+          ],
+          "sources": [
+            "mods/actuallyadditions-1.3.26+mc1.21.1.jar!/data/c/tags/item/storage_blocks/black_quartz.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "actuallyadditions"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "blackstone",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/blackstone"
+          ],
+          "items": [
+            "occultism:crushed_blackstone"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/blackstone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "blaze",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/blaze"
+          ],
+          "items": [
+            "minecraft:blaze_powder"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/blaze.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "minecraft"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "blaze_gold",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/blaze_gold"
+          ],
+          "items": [
+            "silentgear:blaze_gold_dust"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/dusts/blaze_gold.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ingot": {
+          "tags": [
+            "c:ingots/blaze_gold"
+          ],
+          "items": [
+            "silentgear:blaze_gold_ingot"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/ingots/blaze_gold.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/blaze_gold"
+          ],
+          "items": [
+            "silentgear:blaze_gold_nugget"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/nuggets/blaze_gold.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/blaze_gold"
+          ],
+          "items": [
+            "silentgear:blaze_gold_block"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/storage_blocks/blaze_gold.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "blazium",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/blazium"
+          ],
+          "items": [
+            "aoa3:blazium_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/blazium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "bloodstone",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/bloodstone"
+          ],
+          "items": [
+            "aoa3:bloodstone_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/bloodstone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "blue_gemstone",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/blue_gemstone"
+          ],
+          "items": [
+            "aoa3:blue_gemstone_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/blue_gemstone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "blue_ice",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/blue_ice"
+          ],
+          "items": [
+            "occultism:crushed_blue_ice"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/blue_ice.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "bone_fragments",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/bone_fragments"
+          ],
+          "items": [
+            "aoa3:bone_fragments_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/bone_fragments.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "bort",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/bort"
+          ],
+          "items": [
+            "silentgear:bort"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/gems/bort.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/bort"
+          ],
+          "items": [
+            "silentgear:bort_ore",
+            "silentgear:deepslate_bort_ore"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/ores/bort.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/bort"
+          ],
+          "items": [
+            "silentgear:bort_block"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/storage_blocks/bort.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "brass",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/brass"
+          ],
+          "items": [
+            "occultengineering:brass_dust"
+          ],
+          "sources": [
+            "mods/occultengineering-1.21.1-0.13.1.jar!/data/c/tags/item/dusts/brass.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultengineering"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ingot": {
+          "tags": [
+            "c:ingots/brass"
+          ],
+          "items": [
+            "create:brass_ingot"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/ingots/brass.json",
+            "mods/railways-0.2.1+neoforge-mc1.21.1.jar!/data/c/tags/item/ingots/brass.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/brass"
+          ],
+          "items": [
+            "create:brass_nugget"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/nuggets/brass.json",
+            "mods/railways-0.2.1+neoforge-mc1.21.1.jar!/data/c/tags/item/nuggets/brass.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "plate": {
+          "tags": [
+            "c:plates/brass"
+          ],
+          "items": [
+            "create:brass_sheet"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/plates/brass.json",
+            "mods/railways-0.2.1+neoforge-mc1.21.1.jar!/data/c/tags/item/plates/brass.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "rod": {
+          "tags": [
+            "c:rods/brass"
+          ],
+          "items": [
+            "createaddition:brass_rod"
+          ],
+          "sources": [
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/rods/brass.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createaddition"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/brass"
+          ],
+          "items": [
+            "create:brass_block"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/storage_blocks/brass.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "bronze",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/bronze"
+          ],
+          "items": [
+            "alloyed:bronze_ingot",
+            "silentgear:bronze_ingot"
+          ],
+          "sources": [
+            "mods/alloyed-3.0.6+1.21.1-neoforge.jar!/data/c/tags/item/ingots/bronze.json",
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/ingots/bronze.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "alloyed",
+            "silentgear"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/bronze"
+          ],
+          "items": [
+            "alloyed:bronze_nugget"
+          ],
+          "sources": [
+            "mods/alloyed-3.0.6+1.21.1-neoforge.jar!/data/c/tags/item/nuggets/bronze.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "alloyed"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "plate": {
+          "tags": [
+            "c:plates/bronze"
+          ],
+          "items": [
+            "alloyed:bronze_sheet"
+          ],
+          "sources": [
+            "mods/alloyed-3.0.6+1.21.1-neoforge.jar!/data/c/tags/item/plates/bronze.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "alloyed"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/bronze"
+          ],
+          "items": [
+            "alloyed:bronze_block",
+            "alloyed:waxed_bronze_block"
+          ],
+          "sources": [
+            "mods/alloyed-3.0.6+1.21.1-neoforge.jar!/data/c/tags/item/storage_blocks/bronze.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "alloyed"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": true
+    },
+    {
+      "material": "calcite",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/calcite"
+          ],
+          "items": [
+            "occultism:crushed_calcite"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/calcite.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "cardboard",
+      "forms": {
+        "plate": {
+          "tags": [
+            "c:plates/cardboard"
+          ],
+          "items": [
+            "create:cardboard"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/plates/cardboard.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/cardboard"
+          ],
+          "items": [
+            "create:cardboard_block"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/storage_blocks/cardboard.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "carminite",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/carminite"
+          ],
+          "items": [
+            "twilightforest:carminite"
+          ],
+          "sources": [
+            "mods/twilightforest-1.21.1-4.8.3345-universal.jar!/data/c/tags/item/gems/carminite.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "twilightforest"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/carminite"
+          ],
+          "items": [
+            "twilightforest:carminite_block"
+          ],
+          "sources": [
+            "mods/twilightforest-1.21.1-4.8.3345-universal.jar!/data/c/tags/item/storage_blocks/carminite.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "twilightforest"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "cast_iron",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/cast_iron"
+          ],
+          "items": [
+            "tfmg:cast_iron_ingot"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/ingots/cast_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/cast_iron"
+          ],
+          "items": [
+            "tfmg:cast_iron_nugget"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/nuggets/cast_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "plate": {
+          "tags": [
+            "c:plates/cast_iron"
+          ],
+          "items": [
+            "tfmg:cast_iron_sheet"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/plates/cast_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/cast_iron"
+          ],
+          "items": [
+            "tfmg:cast_iron_block"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/storage_blocks/cast_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "certus_quartz",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/certus_quartz"
+          ],
+          "items": [
+            "ae2:certus_quartz_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/certus_quartz.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "ae2"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "charcoal_dust",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/charcoal_dust"
+          ],
+          "items": [
+            "cgs:charcoal_dust"
+          ],
+          "sources": [
+            "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/dusts/charcoal_dust.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "cgs"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "charged_runium",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/charged_runium"
+          ],
+          "items": [
+            "aoa3:charged_runium_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/charged_runium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "chimerite",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/chimerite"
+          ],
+          "items": [
+            "mna:chimerite_gem"
+          ],
+          "sources": [
+            "mods/theurgy-1.21.1-neoforge-1.78.0.jar!/data/c/tags/item/gems/chimerite.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "mna"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "chorium",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/chorium"
+          ],
+          "items": [
+            "createcasing:chorium_ingot"
+          ],
+          "sources": [
+            "mods/Create Encased-1.21.1-1.10.0.jar!/data/c/tags/item/ingots/chorium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createcasing"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "plate": {
+          "tags": [
+            "c:plates/chorium"
+          ],
+          "items": [
+            "createcasing:chorium_sheet"
+          ],
+          "sources": [
+            "mods/Create Encased-1.21.1-1.10.0.jar!/data/c/tags/item/plates/chorium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createcasing"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "chronite",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/chronite"
+          ],
+          "items": [
+            "chronodawn:chronite_ore",
+            "chronodawn:deepslate_chronite_ore"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/ores/chronite.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "clockstone",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/clockstone"
+          ],
+          "items": [
+            "chronodawn:clockstone"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/ingots/clockstone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/clockstone"
+          ],
+          "items": [
+            "chronodawn:clockstone_ore",
+            "chronodawn:deepslate_clockstone_ore"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/ores/clockstone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/clockstone"
+          ],
+          "items": [
+            "chronodawn:clockstone_block"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/storage_blocks/clockstone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "coal",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/coal"
+          ],
+          "items": [
+            "chronodawn:temporal_coal_ore"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/ores/coal.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "coal_coke",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/coal_coke"
+          ],
+          "items": [
+            "tfmg:coal_coke_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/coal_coke.json",
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/dusts/coal_coke.json"
+          ],
+          "unresolved_tags": [
+            "c:dusts/coke"
+          ],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/coal_coke"
+          ],
+          "items": [
+            "tfmg:coal_coke_block"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/storage_blocks/coal_coke.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": true
+    },
+    {
+      "material": "constantan",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/constantan"
+          ],
+          "items": [
+            "tfmg:constantan_ingot"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/ingots/constantan.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/constantan"
+          ],
+          "items": [
+            "tfmg:constantan_nugget"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/nuggets/constantan.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/constantan"
+          ],
+          "items": [
+            "tfmg:constantan_block"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/storage_blocks/constantan.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "wire": {
+          "tags": [
+            "c:wires/constantan"
+          ],
+          "items": [
+            "tfmg:constantan_wire"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/wires/constantan.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "copper",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/copper"
+          ],
+          "items": [
+            "occultism:copper_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/copper.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ingot": {
+          "tags": [
+            "c:ingots/copper"
+          ],
+          "items": [
+            "minecraft:copper_ingot"
+          ],
+          "sources": [
+            "mods/Quark-4.1-487.jar!/data/c/tags/item/ingots/copper.json",
+            "mods/railways-0.2.1+neoforge-mc1.21.1.jar!/data/c/tags/item/ingots/copper.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "minecraft"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/copper"
+          ],
+          "items": [
+            "create:copper_nugget",
+            "iceandfire:copper_nugget",
+            "twilightforest:copper_nugget"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/nuggets/copper.json",
+            "mods/iceandfire-2.1.4.jar!/data/c/tags/item/nuggets/copper.json",
+            "mods/twilightforest-1.21.1-4.8.3345-universal.jar!/data/c/tags/item/nuggets/copper.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 3,
+          "provider_namespaces": [
+            "create",
+            "iceandfire",
+            "twilightforest"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "plate": {
+          "tags": [
+            "c:plates/copper"
+          ],
+          "items": [
+            "create:copper_sheet"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/plates/copper.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "rod": {
+          "tags": [
+            "c:rods/copper"
+          ],
+          "items": [
+            "createaddition:copper_rod"
+          ],
+          "sources": [
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/rods/copper.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createaddition"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "wire": {
+          "tags": [
+            "c:wires/copper"
+          ],
+          "items": [
+            "createaddition:copper_wire",
+            "tfmg:copper_wire"
+          ],
+          "sources": [
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/wires/copper.json",
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/wires/copper.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "createaddition",
+            "tfmg"
+          ],
+          "cross_namespace_conflict": true
+        }
+      },
+      "needs_review": true
+    },
+    {
+      "material": "crimson_iron",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/crimson_iron"
+          ],
+          "items": [
+            "silentgear:crimson_iron_dust"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/dusts/crimson_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ingot": {
+          "tags": [
+            "c:ingots/crimson_iron"
+          ],
+          "items": [
+            "silentgear:crimson_iron_ingot"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/ingots/crimson_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/crimson_iron"
+          ],
+          "items": [
+            "silentgear:crimson_iron_nugget"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/nuggets/crimson_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/crimson_iron"
+          ],
+          "items": [
+            "silentgear:blackstone_crimson_iron_ore",
+            "silentgear:crimson_iron_ore"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/ores/crimson_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_material": {
+          "tags": [
+            "c:raw_materials/crimson_iron"
+          ],
+          "items": [
+            "silentgear:raw_crimson_iron"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/raw_materials/crimson_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_storage_block": {
+          "tags": [
+            "c:storage_blocks/raw_crimson_iron"
+          ],
+          "items": [
+            "silentgear:raw_crimson_iron_block"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/storage_blocks/raw_crimson_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/crimson_iron"
+          ],
+          "items": [
+            "silentgear:crimson_iron_block"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/storage_blocks/crimson_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "crimson_steel",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/crimson_steel"
+          ],
+          "items": [
+            "silentgear:crimson_steel_dust"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/dusts/crimson_steel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ingot": {
+          "tags": [
+            "c:ingots/crimson_steel"
+          ],
+          "items": [
+            "silentgear:crimson_steel_ingot"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/ingots/crimson_steel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/crimson_steel"
+          ],
+          "items": [
+            "silentgear:crimson_steel_nugget"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/nuggets/crimson_steel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/crimson_steel"
+          ],
+          "items": [
+            "silentgear:crimson_steel_block"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/storage_blocks/crimson_steel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "crystallite",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/crystallite"
+          ],
+          "items": [
+            "aoa3:crystallite_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/crystallite.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "dark",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/dark"
+          ],
+          "items": [],
+          "sources": [
+            "mods/theurgy-1.21.1-neoforge-1.78.0.jar!/data/c/tags/item/gems/dark.json"
+          ],
+          "unresolved_tags": [
+            "evilcraft:gems/dark"
+          ],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 0,
+          "provider_namespaces": [],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": true
+    },
+    {
+      "material": "dark_gem",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/dark_gem"
+          ],
+          "items": [
+            "evilcraft:dark_gem_crushed"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/dark_gem.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "evilcraft"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "gem": {
+          "tags": [
+            "c:gems/dark_gem"
+          ],
+          "items": [
+            "evilcraft:dark_gem"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/gems/dark_gem.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "evilcraft"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/dark_gem"
+          ],
+          "items": [
+            "evilcraft:dark_ores"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/dark_gem.json",
+            "mods/theurgy-1.21.1-neoforge-1.78.0.jar!/data/c/tags/item/ores/dark_gem.json"
+          ],
+          "unresolved_tags": [
+            "evilcraft:dark_ores",
+            "evilcraft:ores/dark_gem"
+          ],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "evilcraft"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/dark_gem"
+          ],
+          "items": [
+            "evilcraft:dark_block"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/storage_blocks/dark_gem.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "evilcraft"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": true
+    },
+    {
+      "material": "demonite",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/demonite"
+          ],
+          "items": [
+            "bloodmagic:ingot_hellforged"
+          ],
+          "sources": [
+            "mods/theurgy-1.21.1-neoforge-1.78.0.jar!/data/c/tags/item/ingots/demonite.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "bloodmagic"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_material": {
+          "tags": [
+            "c:raw_materials/demonite"
+          ],
+          "items": [
+            "bloodmagic:rawdemonite"
+          ],
+          "sources": [
+            "mods/theurgy-1.21.1-neoforge-1.78.0.jar!/data/c/tags/item/raw_materials/demonite.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "bloodmagic"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "diamond",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/diamond"
+          ],
+          "items": [
+            "createaddition:diamond_grit"
+          ],
+          "sources": [
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/dusts/diamond.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createaddition"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/diamond"
+          ],
+          "items": [
+            "silentgear:diamond_shard"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/nuggets/diamond.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "dragonyst",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/dragonyst"
+          ],
+          "items": [
+            "occultism:dragonyst_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/dragonyst.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "echo",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/echo"
+          ],
+          "items": [
+            "occultism:echo_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/echo.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "elecanium",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/elecanium"
+          ],
+          "items": [
+            "aoa3:elecanium_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/elecanium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "electrum",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/electrum"
+          ],
+          "items": [
+            "createaddition:electrum_ingot"
+          ],
+          "sources": [
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/ingots/electrum.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createaddition"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/electrum"
+          ],
+          "items": [
+            "createaddition:electrum_nugget"
+          ],
+          "sources": [
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/nuggets/electrum.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createaddition"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "plate": {
+          "tags": [
+            "c:plates/electrum"
+          ],
+          "items": [
+            "createaddition:electrum_sheet"
+          ],
+          "sources": [
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/plates/electrum.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createaddition"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "rod": {
+          "tags": [
+            "c:rods/electrum"
+          ],
+          "items": [
+            "createaddition:electrum_rod"
+          ],
+          "sources": [
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/rods/electrum.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createaddition"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:blocks/electrum",
+            "c:storage_blocks/electrum"
+          ],
+          "items": [
+            "createaddition:electrum_block"
+          ],
+          "sources": [
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/blocks/electrum.json",
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/storage_blocks/electrum.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createaddition"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "wire": {
+          "tags": [
+            "c:wires/electrum"
+          ],
+          "items": [
+            "createaddition:electrum_wire"
+          ],
+          "sources": [
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/wires/electrum.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createaddition"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "emberstone",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/emberstone"
+          ],
+          "items": [
+            "aoa3:emberstone_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/emberstone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "emerald",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/emerald"
+          ],
+          "items": [
+            "occultism:emerald_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/emerald.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/emerald"
+          ],
+          "items": [
+            "silentgear:emerald_shard"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/nuggets/emerald.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "end_stone",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/end_stone"
+          ],
+          "items": [
+            "occultism:crushed_end_stone"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/end_stone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "enhanced_clockstone",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/enhanced_clockstone"
+          ],
+          "items": [
+            "chronodawn:enhanced_clockstone"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/ingots/enhanced_clockstone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "entropy_crystal",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/entropy_crystal"
+          ],
+          "items": [
+            "chronodawn:entropy_crystal"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/gems/entropy_crystal.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/entropy_crystal"
+          ],
+          "items": [
+            "chronodawn:entropy_crystal_ore"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/ores/entropy_crystal.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "eudialyte",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/eudialyte"
+          ],
+          "items": [
+            "tropicraft:eudialyte_gem"
+          ],
+          "sources": [
+            "mods/Tropicraft-9.8.1.jar!/data/c/tags/item/gems/eudialyte.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tropicraft"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/eudialyte"
+          ],
+          "items": [
+            "tropicraft:eudialyte_ore"
+          ],
+          "sources": [
+            "mods/Tropicraft-9.8.1.jar!/data/c/tags/item/ores/eudialyte.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tropicraft"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "fiery",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/fiery"
+          ],
+          "items": [
+            "twilightforest:fiery_ingot"
+          ],
+          "sources": [
+            "mods/twilightforest-1.21.1-4.8.3345-universal.jar!/data/c/tags/item/ingots/fiery.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "twilightforest"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/fiery"
+          ],
+          "items": [
+            "twilightforest:fiery_block"
+          ],
+          "sources": [
+            "mods/twilightforest-1.21.1-4.8.3345-universal.jar!/data/c/tags/item/storage_blocks/fiery.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "twilightforest"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "fluix",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/fluix"
+          ],
+          "items": [
+            "ae2:fluix_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/fluix.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "ae2"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "garnet",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/garnet"
+          ],
+          "items": [
+            "irons_jewelry:garnet"
+          ],
+          "sources": [
+            "mods/irons_jewelry-1.21.1-2.0.2.jar!/data/c/tags/item/gems/garnet.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "irons_jewelry"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "gemenyte",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/gemenyte"
+          ],
+          "items": [
+            "aoa3:gemenyte_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/gemenyte.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "ghastly",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/ghastly"
+          ],
+          "items": [
+            "aoa3:ghastly_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/ghastly.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "ghoulish",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/ghoulish"
+          ],
+          "items": [
+            "aoa3:ghoulish_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/ghoulish.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "gold",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/gold"
+          ],
+          "items": [
+            "occultism:gold_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/gold.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/gold"
+          ],
+          "items": [
+            "minecraft:gold_nugget"
+          ],
+          "sources": [
+            "mods/balm-neoforge-1.21.1-21.0.66.jar!/data/c/tags/item/nuggets/gold.json",
+            "mods/iceandfire-2.1.4.jar!/data/c/tags/item/nuggets/gold.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "minecraft"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/gold"
+          ],
+          "items": [
+            "chronodawn:deepslate_temporal_gold_ore",
+            "chronodawn:temporal_gold_ore"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/ores/gold.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "plate": {
+          "tags": [
+            "c:plates/gold"
+          ],
+          "items": [
+            "create:golden_sheet"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/plates/gold.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "rod": {
+          "tags": [
+            "c:rods/gold"
+          ],
+          "items": [
+            "createaddition:gold_rod"
+          ],
+          "sources": [
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/rods/gold.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createaddition"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "wire": {
+          "tags": [
+            "c:wires/gold"
+          ],
+          "items": [
+            "createaddition:gold_wire"
+          ],
+          "sources": [
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/wires/gold.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createaddition"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "green_gemstone",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/green_gemstone"
+          ],
+          "items": [
+            "aoa3:green_gemstone_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/green_gemstone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "ice",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/ice"
+          ],
+          "items": [
+            "occultism:crushed_ice"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/ice.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "iesnium",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/iesnium"
+          ],
+          "items": [
+            "occultism:iesnium_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/iesnium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ingot": {
+          "tags": [
+            "c:ingots/iesnium"
+          ],
+          "items": [
+            "occultism:iesnium_ingot"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ingots/iesnium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/iesnium"
+          ],
+          "items": [
+            "occultism:iesnium_nugget"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/nuggets/iesnium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/iesnium"
+          ],
+          "items": [
+            "occultism:iesnium_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/iesnium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_material": {
+          "tags": [
+            "c:raw_materials/iesnium"
+          ],
+          "items": [
+            "occultism:raw_iesnium"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/raw_materials/iesnium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_storage_block": {
+          "tags": [
+            "c:storage_blocks/raw_iesnium"
+          ],
+          "items": [
+            "occultism:raw_iesnium_block"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/storage_blocks/raw_iesnium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/iesnium"
+          ],
+          "items": [
+            "occultism:iesnium_block"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/storage_blocks/iesnium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "industrial_iron",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/industrial_iron"
+          ],
+          "items": [
+            "createdeco:industrial_iron_ingot"
+          ],
+          "sources": [
+            "mods/createdeco-2.1.3.jar!/data/c/tags/item/ingots/industrial_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createdeco"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/industrial_iron"
+          ],
+          "items": [
+            "createdeco:industrial_iron_nugget"
+          ],
+          "sources": [
+            "mods/createdeco-2.1.3.jar!/data/c/tags/item/nuggets/industrial_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createdeco"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "plate": {
+          "tags": [
+            "c:plates/industrial_iron"
+          ],
+          "items": [
+            "createcasing:industrial_iron_sheet",
+            "createdeco:industrial_iron_sheet"
+          ],
+          "sources": [
+            "mods/Create Encased-1.21.1-1.10.0.jar!/data/c/tags/item/plates/industrial_iron.json",
+            "mods/createdeco-2.1.3.jar!/data/c/tags/item/plates/industrial_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "createcasing",
+            "createdeco"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/industrial_iron"
+          ],
+          "items": [
+            "create:industrial_iron_block"
+          ],
+          "sources": [
+            "mods/createdeco-2.1.3.jar!/data/c/tags/item/storage_blocks/industrial_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": true
+    },
+    {
+      "material": "iron",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/iron"
+          ],
+          "items": [
+            "occultism:iron_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ingot": {
+          "tags": [
+            "c:ingots/iron"
+          ],
+          "items": [
+            "minecraft:iron_ingot"
+          ],
+          "sources": [
+            "mods/iceandfire-2.1.4.jar!/data/c/tags/item/ingots/iron.json",
+            "mods/railways-0.2.1+neoforge-mc1.21.1.jar!/data/c/tags/item/ingots/iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "minecraft"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/iron"
+          ],
+          "items": [
+            "minecraft:iron_nugget"
+          ],
+          "sources": [
+            "mods/balm-neoforge-1.21.1-21.0.66.jar!/data/c/tags/item/nuggets/iron.json",
+            "mods/railways-0.2.1+neoforge-mc1.21.1.jar!/data/c/tags/item/nuggets/iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "minecraft"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/iron"
+          ],
+          "items": [
+            "chronodawn:temporal_iron_ore"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/ores/iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "plate": {
+          "tags": [
+            "c:plates/iron"
+          ],
+          "items": [
+            "create:iron_sheet"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/plates/iron.json",
+            "mods/railways-0.2.1+neoforge-mc1.21.1.jar!/data/c/tags/item/plates/iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "rod": {
+          "tags": [
+            "c:rods/iron"
+          ],
+          "items": [
+            "createaddition:iron_rod",
+            "silentgear:iron_rod"
+          ],
+          "sources": [
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/rods/iron.json",
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/rods/iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "createaddition",
+            "silentgear"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "wire": {
+          "tags": [
+            "c:wires/iron"
+          ],
+          "items": [
+            "createaddition:iron_wire"
+          ],
+          "sources": [
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/wires/iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createaddition"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": true
+    },
+    {
+      "material": "ironwood",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/ironwood"
+          ],
+          "items": [
+            "twilightforest:ironwood_ingot"
+          ],
+          "sources": [
+            "mods/twilightforest-1.21.1-4.8.3345-universal.jar!/data/c/tags/item/ingots/ironwood.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "twilightforest"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_material": {
+          "tags": [
+            "c:raw_materials/ironwood"
+          ],
+          "items": [
+            "twilightforest:raw_ironwood"
+          ],
+          "sources": [
+            "mods/twilightforest-1.21.1-4.8.3345-universal.jar!/data/c/tags/item/raw_materials/ironwood.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "twilightforest"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/ironwood"
+          ],
+          "items": [
+            "twilightforest:ironwood_block"
+          ],
+          "sources": [
+            "mods/twilightforest-1.21.1-4.8.3345-universal.jar!/data/c/tags/item/storage_blocks/ironwood.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "twilightforest"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "jade",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/jade"
+          ],
+          "items": [
+            "aoa3:jade_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/jade.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "jewelyte",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/jewelyte"
+          ],
+          "items": [
+            "aoa3:jewelyte_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/jewelyte.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "knightmetal",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/knightmetal"
+          ],
+          "items": [
+            "twilightforest:knightmetal_ingot"
+          ],
+          "sources": [
+            "mods/twilightforest-1.21.1-4.8.3345-universal.jar!/data/c/tags/item/ingots/knightmetal.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "twilightforest"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_material": {
+          "tags": [
+            "c:raw_materials/knightmetal"
+          ],
+          "items": [
+            "twilightforest:armor_shard_cluster"
+          ],
+          "sources": [
+            "mods/twilightforest-1.21.1-4.8.3345-universal.jar!/data/c/tags/item/raw_materials/knightmetal.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "twilightforest"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/knightmetal"
+          ],
+          "items": [
+            "twilightforest:knightmetal_block"
+          ],
+          "sources": [
+            "mods/twilightforest-1.21.1-4.8.3345-universal.jar!/data/c/tags/item/storage_blocks/knightmetal.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "twilightforest"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "lapis",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/lapis"
+          ],
+          "items": [
+            "occultism:lapis_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/lapis.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "lead",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/lead"
+          ],
+          "items": [
+            "cgs:lead_ingot",
+            "tfmg:lead_ingot"
+          ],
+          "sources": [
+            "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/ingots/lead.json",
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/ingots/lead.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "cgs",
+            "tfmg"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/lead"
+          ],
+          "items": [
+            "cgs:lead_nugget",
+            "tfmg:lead_nugget"
+          ],
+          "sources": [
+            "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/nuggets/lead.json",
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/nuggets/lead.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "cgs",
+            "tfmg"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "ore": {
+          "tags": [
+            "c:ores/lead"
+          ],
+          "items": [
+            "cgs:deepslate_lead_ore",
+            "cgs:lead_ore",
+            "tfmg:deepslate_lead_ore",
+            "tfmg:lead_ore"
+          ],
+          "sources": [
+            "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/ores/lead.json",
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/ores/lead.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 4,
+          "provider_namespaces": [
+            "cgs",
+            "tfmg"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "plate": {
+          "tags": [
+            "c:plates/lead"
+          ],
+          "items": [
+            "tfmg:lead_sheet"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/plates/lead.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_material": {
+          "tags": [
+            "c:raw_materials/lead"
+          ],
+          "items": [
+            "cgs:raw_lead",
+            "tfmg:raw_lead"
+          ],
+          "sources": [
+            "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/raw_materials/lead.json",
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/raw_materials/lead.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "cgs",
+            "tfmg"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "raw_storage_block": {
+          "tags": [
+            "c:storage_blocks/raw_lead"
+          ],
+          "items": [
+            "cgs:raw_lead_block",
+            "tfmg:raw_lead_block"
+          ],
+          "sources": [
+            "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/storage_blocks/raw_lead.json",
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/storage_blocks/raw_lead.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "cgs",
+            "tfmg"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/lead"
+          ],
+          "items": [
+            "tfmg:lead_block"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/storage_blocks/lead.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": true
+    },
+    {
+      "material": "limonite",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/limonite"
+          ],
+          "items": [
+            "aoa3:limonite_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/limonite.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "lithium",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/lithium"
+          ],
+          "items": [
+            "tfmg:lithium_ingot"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/ingots/lithium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/lithium"
+          ],
+          "items": [
+            "tfmg:lithium_nugget"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/nuggets/lithium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/lithium"
+          ],
+          "items": [
+            "tfmg:deepslate_lithium_ore",
+            "tfmg:lithium_ore"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/ores/lithium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_material": {
+          "tags": [
+            "c:raw_materials/lithium"
+          ],
+          "items": [
+            "tfmg:raw_lithium"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/raw_materials/lithium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_storage_block": {
+          "tags": [
+            "c:storage_blocks/raw_lithium"
+          ],
+          "items": [
+            "tfmg:raw_lithium_block"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/storage_blocks/raw_lithium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/lithium"
+          ],
+          "items": [
+            "tfmg:lithium_block"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/storage_blocks/lithium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "lyon",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/lyon"
+          ],
+          "items": [
+            "aoa3:lyon_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/lyon.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "manganese",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/manganese"
+          ],
+          "items": [
+            "tropicraft:manganese_ingot"
+          ],
+          "sources": [
+            "mods/Tropicraft-9.8.1.jar!/data/c/tags/item/ingots/manganese.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tropicraft"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/manganese"
+          ],
+          "items": [
+            "tropicraft:manganese_ore"
+          ],
+          "sources": [
+            "mods/Tropicraft-9.8.1.jar!/data/c/tags/item/ores/manganese.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tropicraft"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "meat",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/meat"
+          ],
+          "items": [
+            "productivemetalworks:meat_ingot"
+          ],
+          "sources": [
+            "mods/productivemetalworks-1.21.1-1.15.1.jar!/data/c/tags/item/ingots/meat.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "productivemetalworks"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/meat"
+          ],
+          "items": [
+            "productivemetalworks:meat_nugget"
+          ],
+          "sources": [
+            "mods/productivemetalworks-1.21.1-1.15.1.jar!/data/c/tags/item/nuggets/meat.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "productivemetalworks"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "mithril",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/mithril"
+          ],
+          "items": [
+            "irons_spellbooks:mithril_ingot"
+          ],
+          "sources": [
+            "mods/irons_spellbooks-1.21.1-3.16.3.jar!/data/c/tags/item/ingots/mithril.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "irons_spellbooks"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/mithril"
+          ],
+          "items": [
+            "irons_spellbooks:deepslate_mithril_ore",
+            "irons_spellbooks:mithril_ore"
+          ],
+          "sources": [
+            "mods/irons_spellbooks-1.21.1-3.16.3.jar!/data/c/tags/item/ores/mithril.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "irons_spellbooks"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_material": {
+          "tags": [
+            "c:raw_materials/mithril"
+          ],
+          "items": [
+            "irons_spellbooks:raw_mithril"
+          ],
+          "sources": [
+            "mods/irons_spellbooks-1.21.1-3.16.3.jar!/data/c/tags/item/raw_materials/mithril.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "irons_spellbooks"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "moonstone",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/moonstone"
+          ],
+          "items": [
+            "irons_jewelry:moonstone"
+          ],
+          "sources": [
+            "mods/irons_jewelry-1.21.1-2.0.2.jar!/data/c/tags/item/gems/moonstone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "irons_jewelry"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "mystite",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/mystite"
+          ],
+          "items": [
+            "aoa3:mystite_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/mystite.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "netherite",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/netherite"
+          ],
+          "items": [
+            "occultism:netherite_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/netherite.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/netherite"
+          ],
+          "items": [
+            "createdeco:netherite_nugget"
+          ],
+          "sources": [
+            "mods/createdeco-2.1.3.jar!/data/c/tags/item/nuggets/netherite.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createdeco"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "netherite_scrap",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/netherite_scrap"
+          ],
+          "items": [
+            "occultism:netherite_scrap_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/netherite_scrap.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "nickel",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/nickel"
+          ],
+          "items": [
+            "tfmg:nickel_ingot"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/ingots/nickel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/nickel"
+          ],
+          "items": [
+            "tfmg:nickel_nugget"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/nuggets/nickel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/nickel"
+          ],
+          "items": [
+            "tfmg:deepslate_nickel_ore",
+            "tfmg:nickel_ore"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/ores/nickel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "plate": {
+          "tags": [
+            "c:plates/nickel"
+          ],
+          "items": [
+            "tfmg:nickel_sheet"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/plates/nickel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_material": {
+          "tags": [
+            "c:raw_materials/nickel"
+          ],
+          "items": [
+            "tfmg:raw_nickel"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/raw_materials/nickel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_storage_block": {
+          "tags": [
+            "c:storage_blocks/raw_nickel"
+          ],
+          "items": [
+            "tfmg:raw_nickel_block"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/storage_blocks/raw_nickel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/nickel"
+          ],
+          "items": [
+            "tfmg:nickel_block"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/storage_blocks/nickel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "niter",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/niter"
+          ],
+          "items": [
+            "cgs:niter"
+          ],
+          "sources": [
+            "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/dusts/niter.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "cgs"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "obsidian",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/obsidian"
+          ],
+          "items": [
+            "create:powdered_obsidian",
+            "occultism:obsidian_dust"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/dusts/obsidian.json",
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/dusts/obsidian.json",
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/obsidian.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "create",
+            "occultism"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "plate": {
+          "tags": [
+            "c:plates/obsidian"
+          ],
+          "items": [
+            "create:sturdy_sheet"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/plates/obsidian.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": true
+    },
+    {
+      "material": "onyx",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/onyx"
+          ],
+          "items": [
+            "irons_jewelry:onyx"
+          ],
+          "sources": [
+            "mods/irons_jewelry-1.21.1-2.0.2.jar!/data/c/tags/item/gems/onyx.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "irons_jewelry"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "ornamyte",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/ornamyte"
+          ],
+          "items": [
+            "aoa3:ornamyte_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/ornamyte.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "otherrock",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/otherrock"
+          ],
+          "items": [
+            "occultism:burnt_otherrock"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/otherrock.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "otherstone",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/otherstone"
+          ],
+          "items": [
+            "occultism:burnt_otherstone"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/otherstone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "otherworld_wood",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/otherworld_wood"
+          ],
+          "items": [
+            "occultism:otherworld_ashes"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/otherworld_wood.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "packed_ice",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/packed_ice"
+          ],
+          "items": [
+            "occultism:crushed_packed_ice"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/packed_ice.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "pearl",
+      "forms": {
+        "raw_material": {
+          "tags": [
+            "forge:raw_materials/pearl"
+          ],
+          "items": [
+            "alexscaves:pearl"
+          ],
+          "sources": [
+            "mods/alexscaves-2.0.10.jar!/data/forge/tags/items/raw_materials/pearl.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "alexscaves"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "forge:storage_blocks/pearl"
+          ],
+          "items": [
+            "alexscaves:block_of_pearl"
+          ],
+          "sources": [
+            "mods/alexscaves-2.0.10.jar!/data/forge/tags/items/storage_blocks/pearl.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "alexscaves"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "peridot",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/peridot"
+          ],
+          "items": [
+            "irons_jewelry:peridot"
+          ],
+          "sources": [
+            "mods/irons_jewelry-1.21.1-2.0.2.jar!/data/c/tags/item/gems/peridot.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "irons_jewelry"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "plastic",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/plastic"
+          ],
+          "items": [
+            "tfmg:plastic_sheet"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/ingots/plastic.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/plastic"
+          ],
+          "items": [
+            "tfmg:plastic_block"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/storage_blocks/plastic.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "purple_gemstone",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/purple_gemstone"
+          ],
+          "items": [
+            "aoa3:purple_gemstone_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/purple_gemstone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "pyrium",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/pyrium"
+          ],
+          "items": [
+            "irons_spellbooks:pyrium_ingot"
+          ],
+          "sources": [
+            "mods/irons_spellbooks-1.21.1-3.16.3.jar!/data/c/tags/item/ingots/pyrium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "irons_spellbooks"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "red_gemstone",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/red_gemstone"
+          ],
+          "items": [
+            "aoa3:red_gemstone_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/red_gemstone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "redstone",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/redstone"
+          ],
+          "items": [
+            "chronodawn:deepslate_temporal_redstone_ore",
+            "chronodawn:temporal_redstone_ore"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/ores/redstone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "refined_radiance",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/refined_radiance"
+          ],
+          "items": [
+            "create:refined_radiance"
+          ],
+          "sources": [
+            "mods/Create Encased-1.21.1-1.10.0.jar!/data/c/tags/item/ingots/refined_radiance.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "plate": {
+          "tags": [
+            "c:plates/refined_radiance"
+          ],
+          "items": [
+            "createcasing:refined_radiance_sheet"
+          ],
+          "sources": [
+            "mods/Create Encased-1.21.1-1.10.0.jar!/data/c/tags/item/plates/refined_radiance.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createcasing"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "research",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/research"
+          ],
+          "items": [
+            "occultism:research_fragment_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/research.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "rose_gold",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/rose_gold"
+          ],
+          "items": [
+            "additionaladditions:rose_gold_ingot"
+          ],
+          "sources": [
+            "mods/additionaladditions-neoforge-10.0.6.jar!/data/c/tags/item/ingots/rose_gold.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "additionaladditions"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/rose_gold"
+          ],
+          "items": [
+            "additionaladditions:rose_gold_block"
+          ],
+          "sources": [
+            "mods/additionaladditions-neoforge-10.0.6.jar!/data/c/tags/item/storage_blocks/rose_gold.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "additionaladditions"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "rubber",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/rubber"
+          ],
+          "items": [
+            "tfmg:rubber_sheet"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/ingots/rubber.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "ruby",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/ruby"
+          ],
+          "items": [
+            "irons_jewelry:ruby"
+          ],
+          "sources": [
+            "mods/irons_jewelry-1.21.1-2.0.2.jar!/data/c/tags/item/gems/ruby.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "irons_jewelry"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "runium",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/runium"
+          ],
+          "items": [
+            "aoa3:runium_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/runium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "sal_ammoniac",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/sal_ammoniac"
+          ],
+          "items": [
+            "theurgy:sal_ammoniac_crystal"
+          ],
+          "sources": [
+            "mods/theurgy-1.21.1-neoforge-1.78.0.jar!/data/c/tags/item/gems/sal_ammoniac.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "theurgy"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/sal_ammoniac"
+          ],
+          "items": [
+            "theurgy:deepslate_sal_ammoniac_ore",
+            "theurgy:sal_ammoniac_ore"
+          ],
+          "sources": [
+            "mods/theurgy-1.21.1-neoforge-1.78.0.jar!/data/c/tags/item/ores/sal_ammoniac.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "theurgy"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "saltpeter",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/saltpeter"
+          ],
+          "items": [
+            "cgs:niter",
+            "tfmg:nitrate_dust"
+          ],
+          "sources": [
+            "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/dusts/saltpeter.json",
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/dusts/saltpeter.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "cgs",
+            "tfmg"
+          ],
+          "cross_namespace_conflict": true
+        }
+      },
+      "needs_review": true
+    },
+    {
+      "material": "sapphire",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/sapphire"
+          ],
+          "items": [
+            "iceandfire:sapphire_gem",
+            "irons_jewelry:sapphire"
+          ],
+          "sources": [
+            "mods/iceandfire-2.1.4.jar!/data/c/tags/item/gems/sapphire.json",
+            "mods/irons_jewelry-1.21.1-2.0.2.jar!/data/c/tags/item/gems/sapphire.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "iceandfire",
+            "irons_jewelry"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "ore": {
+          "tags": [
+            "c:ores/sapphire"
+          ],
+          "items": [
+            "iceandfire:sapphire_ore"
+          ],
+          "sources": [
+            "mods/iceandfire-2.1.4.jar!/data/c/tags/item/ores/sapphire.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "iceandfire"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": true
+    },
+    {
+      "material": "shadow_steel",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/shadow_steel"
+          ],
+          "items": [
+            "create:shadow_steel"
+          ],
+          "sources": [
+            "mods/Create Encased-1.21.1-1.10.0.jar!/data/c/tags/item/ingots/shadow_steel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "plate": {
+          "tags": [
+            "c:plates/shadow_steel"
+          ],
+          "items": [
+            "createcasing:shadow_steel_sheet"
+          ],
+          "sources": [
+            "mods/Create Encased-1.21.1-1.10.0.jar!/data/c/tags/item/plates/shadow_steel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createcasing"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "shaka",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/shaka"
+          ],
+          "items": [
+            "tropicraft:shaka_ingot"
+          ],
+          "sources": [
+            "mods/Tropicraft-9.8.1.jar!/data/c/tags/item/ingots/shaka.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tropicraft"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/shaka"
+          ],
+          "items": [
+            "tropicraft:shaka_ore"
+          ],
+          "sources": [
+            "mods/Tropicraft-9.8.1.jar!/data/c/tags/item/ores/shaka.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tropicraft"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "shiny_meat",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/shiny_meat"
+          ],
+          "items": [
+            "productivemetalworks:shiny_meat_ingot"
+          ],
+          "sources": [
+            "mods/productivemetalworks-1.21.1-1.15.1.jar!/data/c/tags/item/ingots/shiny_meat.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "productivemetalworks"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "shyregem",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/shyregem"
+          ],
+          "items": [
+            "aoa3:shyregem_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/shyregem.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "shyrestone",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/shyrestone"
+          ],
+          "items": [
+            "aoa3:shyrestone_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/shyrestone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "silicon",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/silicon"
+          ],
+          "items": [
+            "tfmg:silicon_ingot"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/ingots/silicon.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "silver",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/silver"
+          ],
+          "items": [
+            "occultism:silver_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ingot": {
+          "tags": [
+            "c:ingots/silver"
+          ],
+          "items": [
+            "iceandfire:silver_ingot",
+            "occultism:silver_ingot"
+          ],
+          "sources": [
+            "mods/iceandfire-2.1.4.jar!/data/c/tags/item/ingots/silver.json",
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ingots/silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "iceandfire",
+            "occultism"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/silver"
+          ],
+          "items": [
+            "iceandfire:silver_nugget",
+            "occultism:silver_nugget"
+          ],
+          "sources": [
+            "mods/iceandfire-2.1.4.jar!/data/c/tags/item/nuggets/silver.json",
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/nuggets/silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "iceandfire",
+            "occultism"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "ore": {
+          "tags": [
+            "c:ores/silver"
+          ],
+          "items": [
+            "iceandfire:deepslate_silver_ore",
+            "iceandfire:silver_ore",
+            "occultism:silver_ore",
+            "occultism:silver_ore_deepslate"
+          ],
+          "sources": [
+            "mods/iceandfire-2.1.4.jar!/data/c/tags/item/ores/silver.json",
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 4,
+          "provider_namespaces": [
+            "iceandfire",
+            "occultism"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "raw_material": {
+          "tags": [
+            "c:raw_materials/silver"
+          ],
+          "items": [
+            "iceandfire:raw_silver",
+            "occultism:raw_silver"
+          ],
+          "sources": [
+            "mods/iceandfire-2.1.4.jar!/data/c/tags/item/raw_materials/silver.json",
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/raw_materials/silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "iceandfire",
+            "occultism"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "raw_storage_block": {
+          "tags": [
+            "c:storage_blocks/raw_silver"
+          ],
+          "items": [
+            "iceandfire:raw_silver_block",
+            "occultism:raw_silver_block"
+          ],
+          "sources": [
+            "mods/iceandfire-2.1.4.jar!/data/c/tags/item/storage_blocks/raw_silver.json",
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/storage_blocks/raw_silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "iceandfire",
+            "occultism"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/silver"
+          ],
+          "items": [
+            "iceandfire:silver_block",
+            "occultism:silver_block"
+          ],
+          "sources": [
+            "mods/iceandfire-2.1.4.jar!/data/c/tags/item/storage_blocks/silver.json",
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/storage_blocks/silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "iceandfire",
+            "occultism"
+          ],
+          "cross_namespace_conflict": true
+        }
+      },
+      "needs_review": true
+    },
+    {
+      "material": "sky_stone",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/sky_stone"
+          ],
+          "items": [
+            "ae2:sky_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/sky_stone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "ae2"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "source",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/source"
+          ],
+          "items": [
+            "ars_nouveau:source_gem"
+          ],
+          "sources": [
+            "mods/ars_nouveau-1.21.1-5.13.3.jar!/data/c/tags/item/gems/source.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "ars_nouveau"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/source"
+          ],
+          "items": [
+            "ars_nouveau:source_gem_block"
+          ],
+          "sources": [
+            "mods/ars_nouveau-1.21.1-5.13.3.jar!/data/c/tags/item/storage_blocks/source.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "ars_nouveau"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "starmetal",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/starmetal"
+          ],
+          "items": [
+            "silentgear:starmetal_dust"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/dusts/starmetal.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "steel",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/steel"
+          ],
+          "items": [
+            "alloyed:steel_ingot",
+            "cgs:steel_ingot",
+            "tfmg:steel_ingot"
+          ],
+          "sources": [
+            "mods/alloyed-3.0.6+1.21.1-neoforge.jar!/data/c/tags/item/ingots/steel.json",
+            "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/ingots/steel.json",
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/ingots/steel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 3,
+          "provider_namespaces": [
+            "alloyed",
+            "cgs",
+            "tfmg"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/steel"
+          ],
+          "items": [
+            "alloyed:steel_nugget",
+            "cgs:steel_nugget",
+            "tfmg:steel_nugget"
+          ],
+          "sources": [
+            "mods/alloyed-3.0.6+1.21.1-neoforge.jar!/data/c/tags/item/nuggets/steel.json",
+            "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/nuggets/steel.json",
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/nuggets/steel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 3,
+          "provider_namespaces": [
+            "alloyed",
+            "cgs",
+            "tfmg"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "plate": {
+          "tags": [
+            "c:plates/steel"
+          ],
+          "items": [
+            "alloyed:steel_sheet",
+            "cgs:steel_sheet",
+            "tfmg:heavy_plate"
+          ],
+          "sources": [
+            "mods/alloyed-3.0.6+1.21.1-neoforge.jar!/data/c/tags/item/plates/steel.json",
+            "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/plates/steel.json",
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/plates/steel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 3,
+          "provider_namespaces": [
+            "alloyed",
+            "cgs",
+            "tfmg"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "rod": {
+          "tags": [
+            "c:rods/steel"
+          ],
+          "items": [
+            "tfmg:rebar"
+          ],
+          "sources": [
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/rods/steel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tfmg"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/steel"
+          ],
+          "items": [
+            "alloyed:steel_block",
+            "cgs:steel_block",
+            "tfmg:steel_block"
+          ],
+          "sources": [
+            "mods/alloyed-3.0.6+1.21.1-neoforge.jar!/data/c/tags/item/storage_blocks/steel.json",
+            "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/storage_blocks/steel.json",
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/storage_blocks/steel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 3,
+          "provider_namespaces": [
+            "alloyed",
+            "cgs",
+            "tfmg"
+          ],
+          "cross_namespace_conflict": true
+        }
+      },
+      "needs_review": true
+    },
+    {
+      "material": "steeleaf",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/steeleaf"
+          ],
+          "items": [
+            "twilightforest:steeleaf_ingot"
+          ],
+          "sources": [
+            "mods/twilightforest-1.21.1-4.8.3345-universal.jar!/data/c/tags/item/ingots/steeleaf.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "twilightforest"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/steeleaf"
+          ],
+          "items": [
+            "twilightforest:steeleaf_block"
+          ],
+          "sources": [
+            "mods/twilightforest-1.21.1-4.8.3345-universal.jar!/data/c/tags/item/storage_blocks/steeleaf.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "twilightforest"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "sterling_silver",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/sterling_silver"
+          ],
+          "items": [
+            "occultengineering:sterling_silver_ingot"
+          ],
+          "sources": [
+            "mods/occultengineering-1.21.1-0.13.1.jar!/data/c/tags/item/ingots/sterling_silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultengineering"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/sterling_silver"
+          ],
+          "items": [
+            "occultengineering:sterling_silver_nugget"
+          ],
+          "sources": [
+            "mods/occultengineering-1.21.1-0.13.1.jar!/data/c/tags/item/nuggets/sterling_silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultengineering"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/sterling_silver"
+          ],
+          "items": [
+            "occultengineering:sterling_silver_block"
+          ],
+          "sources": [
+            "mods/occultengineering-1.21.1-0.13.1.jar!/data/c/tags/item/storage_blocks/sterling_silver.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultengineering"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "sulfur",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/sulfur",
+            "forge:dusts/sulfur"
+          ],
+          "items": [
+            "alexscaves:sulfur_dust",
+            "cgs:sulfur",
+            "tfmg:sulfur_dust"
+          ],
+          "sources": [
+            "mods/alexscaves-2.0.10.jar!/data/forge/tags/items/dusts/sulfur.json",
+            "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/dusts/sulfur.json",
+            "mods/tfmg-1.2.0.jar!/data/c/tags/item/dusts/sulfur.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 3,
+          "provider_namespaces": [
+            "alexscaves",
+            "cgs",
+            "tfmg"
+          ],
+          "cross_namespace_conflict": true
+        }
+      },
+      "needs_review": true
+    },
+    {
+      "material": "temporal_amber",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/temporal_amber"
+          ],
+          "items": [
+            "chronodawn:temporal_amber_dust"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/dusts/temporal_amber.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/temporal_amber"
+          ],
+          "items": [
+            "chronodawn:deepslate_temporal_amber_ore",
+            "chronodawn:temporal_amber_ore"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/ores/temporal_amber.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_material": {
+          "tags": [
+            "c:raw_materials/temporal_amber"
+          ],
+          "items": [
+            "chronodawn:raw_temporal_amber"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/raw_materials/temporal_amber.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "time_crystal",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/time_crystal"
+          ],
+          "items": [
+            "chronodawn:time_crystal"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/gems/time_crystal.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/time_crystal"
+          ],
+          "items": [
+            "chronodawn:time_crystal_ore"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/ores/time_crystal.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/time_crystal"
+          ],
+          "items": [
+            "chronodawn:time_crystal_block"
+          ],
+          "sources": [
+            "mods/chronodawn-0.14.0+1.21.1-neoforge.jar!/data/c/tags/item/storage_blocks/time_crystal.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "chronodawn"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "topaz",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/topaz"
+          ],
+          "items": [
+            "irons_jewelry:topaz"
+          ],
+          "sources": [
+            "mods/irons_jewelry-1.21.1-2.0.2.jar!/data/c/tags/item/gems/topaz.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "irons_jewelry"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "tyrian_steel",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/tyrian_steel"
+          ],
+          "items": [
+            "silentgear:tyrian_steel_dust"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/dusts/tyrian_steel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ingot": {
+          "tags": [
+            "c:ingots/tyrian_steel"
+          ],
+          "items": [
+            "silentgear:tyrian_steel_ingot"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/ingots/tyrian_steel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/tyrian_steel"
+          ],
+          "items": [
+            "silentgear:tyrian_steel_nugget"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/nuggets/tyrian_steel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/tyrian_steel"
+          ],
+          "items": [
+            "silentgear:tyrian_steel_block"
+          ],
+          "sources": [
+            "mods/silent-gear-1.21.1-neoforge-4.2.1.1.jar!/data/c/tags/item/storage_blocks/tyrian_steel.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "silentgear"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "uraninite",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/uraninite"
+          ],
+          "items": [
+            "powah:uraninite"
+          ],
+          "sources": [
+            "mods/theurgy-1.21.1-neoforge-1.78.0.jar!/data/c/tags/item/ingots/uraninite.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "powah"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "uranium",
+      "forms": {
+        "nugget": {
+          "tags": [
+            "forge:nuggets/uranium"
+          ],
+          "items": [
+            "alexscaves:uranium_shard"
+          ],
+          "sources": [
+            "mods/alexscaves-2.0.10.jar!/data/forge/tags/items/nuggets/uranium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "alexscaves"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_material": {
+          "tags": [
+            "forge:raw_materials/uranium"
+          ],
+          "items": [
+            "alexscaves:uranium"
+          ],
+          "sources": [
+            "mods/alexscaves-2.0.10.jar!/data/forge/tags/items/raw_materials/uranium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "alexscaves"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "forge:storage_blocks/uranium"
+          ],
+          "items": [
+            "alexscaves:block_of_uranium"
+          ],
+          "sources": [
+            "mods/alexscaves-2.0.10.jar!/data/forge/tags/items/storage_blocks/uranium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "alexscaves"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "uru_metal",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/uru_metal"
+          ],
+          "items": [
+            "sgearmetalworks:uru_metal_ingot"
+          ],
+          "sources": [
+            "mods/sgearmetalworks-1.21.1-1.5.0.jar!/data/c/tags/item/ingots/uru_metal.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "sgearmetalworks"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/uru_metal"
+          ],
+          "items": [
+            "sgearmetalworks:uru_metal_nugget"
+          ],
+          "sources": [
+            "mods/sgearmetalworks-1.21.1-1.5.0.jar!/data/c/tags/item/nuggets/uru_metal.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "sgearmetalworks"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/uru_metal"
+          ],
+          "items": [
+            "sgearmetalworks:uru_metal_block"
+          ],
+          "sources": [
+            "mods/sgearmetalworks-1.21.1-1.5.0.jar!/data/c/tags/item/storage_blocks/uru_metal.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "sgearmetalworks"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "varsium",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/varsium"
+          ],
+          "items": [
+            "aoa3:varsium_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/varsium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "weathered_iron",
+      "forms": {
+        "plate": {
+          "tags": [
+            "c:plates/weathered_iron"
+          ],
+          "items": [
+            "createcasing:weathered_iron_sheet"
+          ],
+          "sources": [
+            "mods/Create Encased-1.21.1-1.10.0.jar!/data/c/tags/item/plates/weathered_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createcasing"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "white_gemstone",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/white_gemstone"
+          ],
+          "items": [
+            "aoa3:white_gemstone_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/white_gemstone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "witherite",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/witherite"
+          ],
+          "items": [
+            "occultism:witherite_dust"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/dusts/witherite.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultism"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "wood",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/wood"
+          ],
+          "items": [
+            "createdieselgenerators:wood_chip"
+          ],
+          "sources": [
+            "mods/createdieselgenerators-1.21.1-1.3.15.jar!/data/c/tags/item/dusts/wood.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "createdieselgenerators"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "wrought_iron",
+      "forms": {
+        "ingot": {
+          "tags": [
+            "c:ingots/wrought_iron"
+          ],
+          "items": [
+            "twilightforest:wrought_iron_bar"
+          ],
+          "sources": [
+            "mods/twilightforest-1.21.1-4.8.3345-universal.jar!/data/c/tags/item/ingots/wrought_iron.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "twilightforest"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "yellow_gemstone",
+      "forms": {
+        "ore": {
+          "tags": [
+            "c:ores/yellow_gemstone"
+          ],
+          "items": [
+            "aoa3:yellow_gemstone_ore"
+          ],
+          "sources": [
+            "mods/occultism-1.21.1-neoforge-1.224.5.jar!/data/c/tags/item/ores/yellow_gemstone.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "aoa3"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "zinc",
+      "forms": {
+        "dust": {
+          "tags": [
+            "c:dusts/zinc"
+          ],
+          "items": [
+            "occultengineering:zinc_dust"
+          ],
+          "sources": [
+            "mods/occultengineering-1.21.1-0.13.1.jar!/data/c/tags/item/dusts/zinc.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "occultengineering"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ingot": {
+          "tags": [
+            "c:ingots/zinc"
+          ],
+          "items": [
+            "create:zinc_ingot"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/ingots/zinc.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "nugget": {
+          "tags": [
+            "c:nuggets/zinc"
+          ],
+          "items": [
+            "create:zinc_nugget"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/nuggets/zinc.json",
+            "mods/railways-0.2.1+neoforge-mc1.21.1.jar!/data/c/tags/item/nuggets/zinc.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/zinc"
+          ],
+          "items": [
+            "create:deepslate_zinc_ore",
+            "create:zinc_ore"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/ores/zinc.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 2,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "plate": {
+          "tags": [
+            "c:plates/zinc"
+          ],
+          "items": [
+            "createaddition:zinc_sheet",
+            "createcasing:zinc_sheet",
+            "createdeco:zinc_sheet"
+          ],
+          "sources": [
+            "mods/Create Encased-1.21.1-1.10.0.jar!/data/c/tags/item/plates/zinc.json",
+            "mods/createaddition-1.6.0.jar!/data/c/tags/item/plates/zinc.json",
+            "mods/createdeco-2.1.3.jar!/data/c/tags/item/plates/zinc.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 3,
+          "provider_namespaces": [
+            "createaddition",
+            "createcasing",
+            "createdeco"
+          ],
+          "cross_namespace_conflict": true
+        },
+        "raw_material": {
+          "tags": [
+            "c:raw_materials/zinc"
+          ],
+          "items": [
+            "create:raw_zinc"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/raw_materials/zinc.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "raw_storage_block": {
+          "tags": [
+            "c:storage_blocks/raw_zinc"
+          ],
+          "items": [
+            "create:raw_zinc_block"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/storage_blocks/raw_zinc.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "storage_block": {
+          "tags": [
+            "c:storage_blocks/zinc"
+          ],
+          "items": [
+            "create:zinc_block"
+          ],
+          "sources": [
+            "mods/create-1.21.1-6.0.10.jar!/data/c/tags/item/storage_blocks/zinc.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "create"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": true
+    },
+    {
+      "material": "zircon",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/zircon"
+          ],
+          "items": [
+            "tropicraft:zircon_gem"
+          ],
+          "sources": [
+            "mods/Tropicraft-9.8.1.jar!/data/c/tags/item/gems/zircon.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tropicraft"
+          ],
+          "cross_namespace_conflict": false
+        },
+        "ore": {
+          "tags": [
+            "c:ores/zircon"
+          ],
+          "items": [
+            "tropicraft:zircon_ore"
+          ],
+          "sources": [
+            "mods/Tropicraft-9.8.1.jar!/data/c/tags/item/ores/zircon.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tropicraft"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    },
+    {
+      "material": "zirconium",
+      "forms": {
+        "gem": {
+          "tags": [
+            "c:gems/zirconium"
+          ],
+          "items": [
+            "tropicraft:zirconium_gem"
+          ],
+          "sources": [
+            "mods/Tropicraft-9.8.1.jar!/data/c/tags/item/gems/zirconium.json"
+          ],
+          "unresolved_tags": [],
+          "cycles": [],
+          "replace_sources": [],
+          "candidate_count": 1,
+          "provider_namespaces": [
+            "tropicraft"
+          ],
+          "cross_namespace_conflict": false
+        }
+      },
+      "needs_review": false
+    }
+  ],
+  "source_profile": {
+    "name": "NEXVVS Test",
+    "minecraft": "1.21.1",
+    "loader": "neoforge-21.1.264"
+  }
+}
