@@ -1,0 +1,1994 @@
+{
+  "schema_version": 1,
+  "method": "static focused material audit",
+  "material": "lead",
+  "forms": {
+    "ingot": {
+      "tags": [
+        "c:ingots/lead"
+      ],
+      "items": [
+        "cgs:lead_ingot",
+        "tfmg:lead_ingot"
+      ],
+      "sources": [
+        "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/ingots/lead.json",
+        "mods/tfmg-1.2.0.jar!/data/c/tags/item/ingots/lead.json"
+      ],
+      "unresolved_tags": [],
+      "cycles": [],
+      "replace_sources": [],
+      "candidate_count": 2,
+      "provider_namespaces": [
+        "cgs",
+        "tfmg"
+      ],
+      "cross_namespace_conflict": true
+    },
+    "nugget": {
+      "tags": [
+        "c:nuggets/lead"
+      ],
+      "items": [
+        "cgs:lead_nugget",
+        "tfmg:lead_nugget"
+      ],
+      "sources": [
+        "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/nuggets/lead.json",
+        "mods/tfmg-1.2.0.jar!/data/c/tags/item/nuggets/lead.json"
+      ],
+      "unresolved_tags": [],
+      "cycles": [],
+      "replace_sources": [],
+      "candidate_count": 2,
+      "provider_namespaces": [
+        "cgs",
+        "tfmg"
+      ],
+      "cross_namespace_conflict": true
+    },
+    "ore": {
+      "tags": [
+        "c:ores/lead"
+      ],
+      "items": [
+        "cgs:deepslate_lead_ore",
+        "cgs:lead_ore",
+        "tfmg:deepslate_lead_ore",
+        "tfmg:lead_ore"
+      ],
+      "sources": [
+        "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/ores/lead.json",
+        "mods/tfmg-1.2.0.jar!/data/c/tags/item/ores/lead.json"
+      ],
+      "unresolved_tags": [],
+      "cycles": [],
+      "replace_sources": [],
+      "candidate_count": 4,
+      "provider_namespaces": [
+        "cgs",
+        "tfmg"
+      ],
+      "cross_namespace_conflict": true
+    },
+    "plate": {
+      "tags": [
+        "c:plates/lead"
+      ],
+      "items": [
+        "tfmg:lead_sheet"
+      ],
+      "sources": [
+        "mods/tfmg-1.2.0.jar!/data/c/tags/item/plates/lead.json"
+      ],
+      "unresolved_tags": [],
+      "cycles": [],
+      "replace_sources": [],
+      "candidate_count": 1,
+      "provider_namespaces": [
+        "tfmg"
+      ],
+      "cross_namespace_conflict": false
+    },
+    "raw_material": {
+      "tags": [
+        "c:raw_materials/lead"
+      ],
+      "items": [
+        "cgs:raw_lead",
+        "tfmg:raw_lead"
+      ],
+      "sources": [
+        "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/raw_materials/lead.json",
+        "mods/tfmg-1.2.0.jar!/data/c/tags/item/raw_materials/lead.json"
+      ],
+      "unresolved_tags": [],
+      "cycles": [],
+      "replace_sources": [],
+      "candidate_count": 2,
+      "provider_namespaces": [
+        "cgs",
+        "tfmg"
+      ],
+      "cross_namespace_conflict": true
+    },
+    "raw_storage_block": {
+      "tags": [
+        "c:storage_blocks/raw_lead"
+      ],
+      "items": [
+        "cgs:raw_lead_block",
+        "tfmg:raw_lead_block"
+      ],
+      "sources": [
+        "mods/create-gunsmithing-1.21.1-1.4.9.jar!/data/c/tags/item/storage_blocks/raw_lead.json",
+        "mods/tfmg-1.2.0.jar!/data/c/tags/item/storage_blocks/raw_lead.json"
+      ],
+      "unresolved_tags": [],
+      "cycles": [],
+      "replace_sources": [],
+      "candidate_count": 2,
+      "provider_namespaces": [
+        "cgs",
+        "tfmg"
+      ],
+      "cross_namespace_conflict": true
+    },
+    "storage_block": {
+      "tags": [
+        "c:storage_blocks/lead"
+      ],
+      "items": [
+        "tfmg:lead_block"
+      ],
+      "sources": [
+        "mods/tfmg-1.2.0.jar!/data/c/tags/item/storage_blocks/lead.json"
+      ],
+      "unresolved_tags": [],
+      "cycles": [],
+      "replace_sources": [],
+      "candidate_count": 1,
+      "provider_namespaces": [
+        "tfmg"
+      ],
+      "cross_namespace_conflict": false
+    }
+  },
+  "providers": {
+    "cgs": {
+      "forms": [
+        "ingot",
+        "nugget",
+        "ore",
+        "raw_material",
+        "raw_storage_block"
+      ],
+      "items": [
+        "cgs:deepslate_lead_ore",
+        "cgs:lead_ingot",
+        "cgs:lead_nugget",
+        "cgs:lead_ore",
+        "cgs:raw_lead",
+        "cgs:raw_lead_block"
+      ]
+    },
+    "tfmg": {
+      "forms": [
+        "ingot",
+        "nugget",
+        "ore",
+        "plate",
+        "raw_material",
+        "raw_storage_block",
+        "storage_block"
+      ],
+      "items": [
+        "tfmg:deepslate_lead_ore",
+        "tfmg:lead_block",
+        "tfmg:lead_ingot",
+        "tfmg:lead_nugget",
+        "tfmg:lead_ore",
+        "tfmg:lead_sheet",
+        "tfmg:raw_lead",
+        "tfmg:raw_lead_block"
+      ]
+    }
+  },
+  "summary": {
+    "jars_scanned": 340,
+    "recipes": 85,
+    "recipe_roles": {
+      "consumer": 41,
+      "conversion": 33,
+      "producer": 11
+    },
+    "recipe_namespaces": {
+      "cgs": 27,
+      "create": 6,
+      "createaddition": 2,
+      "occultism": 6,
+      "productivemetalworks": 7,
+      "supplementaries": 2,
+      "tfmg": 29,
+      "theurgy": 6
+    },
+    "worldgen_resources": 6,
+    "worldgen_namespaces": [
+      "cgs",
+      "tfmg"
+    ],
+    "config_files": 1,
+    "parse_issues": 0
+  },
+  "recipes": [
+    {
+      "id": "cgs:blasting/crushed_lead_blast",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipes/blasting/crushed_lead_blast.json",
+      "type": "minecraft:blasting",
+      "role": "producer",
+      "references": [
+        "cgs:lead_ingot"
+      ],
+      "matched_inputs": [],
+      "matched_outputs": [
+        "cgs:lead_ingot"
+      ],
+      "all_outputs": [
+        "cgs:lead_ingot"
+      ]
+    },
+    {
+      "id": "cgs:drilling/lead",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipes/drilling/lead.json",
+      "type": "createoreexcavation:drilling",
+      "role": "producer",
+      "references": [
+        "cgs:raw_lead"
+      ],
+      "matched_inputs": [],
+      "matched_outputs": [
+        "cgs:raw_lead"
+      ],
+      "all_outputs": [
+        "cgs:raw_lead"
+      ]
+    },
+    {
+      "id": "cgs:lead_balls",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/lead_balls.json",
+      "type": "minecraft:stonecutting",
+      "role": "conversion",
+      "references": [
+        "c:nuggets/lead",
+        "cgs:lead_balls"
+      ],
+      "matched_inputs": [
+        "c:nuggets/lead"
+      ],
+      "matched_outputs": [
+        "cgs:lead_balls"
+      ],
+      "all_outputs": [
+        "cgs:lead_balls"
+      ]
+    },
+    {
+      "id": "cgs:lead_block_from_lead_ingot",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/lead_block_from_lead_ingot.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "conversion",
+      "references": [
+        "cgs:lead_block",
+        "cgs:lead_ingot"
+      ],
+      "matched_inputs": [
+        "cgs:lead_ingot"
+      ],
+      "matched_outputs": [
+        "cgs:lead_block"
+      ],
+      "all_outputs": [
+        "cgs:lead_block"
+      ]
+    },
+    {
+      "id": "cgs:lead_ingot",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/lead_ingot.json",
+      "type": "minecraft:crafting_shapeless",
+      "role": "conversion",
+      "references": [
+        "cgs:lead_block",
+        "cgs:lead_ingot"
+      ],
+      "matched_inputs": [
+        "cgs:lead_block"
+      ],
+      "matched_outputs": [
+        "cgs:lead_ingot"
+      ],
+      "all_outputs": [
+        "cgs:lead_ingot"
+      ]
+    },
+    {
+      "id": "cgs:lead_ingot_from_blasting_crushed_raw_lead",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/lead_ingot_from_blasting_crushed_raw_lead.json",
+      "type": "minecraft:blasting",
+      "role": "producer",
+      "references": [
+        "cgs:lead_ingot"
+      ],
+      "matched_inputs": [],
+      "matched_outputs": [
+        "cgs:lead_ingot"
+      ],
+      "all_outputs": [
+        "cgs:lead_ingot"
+      ]
+    },
+    {
+      "id": "cgs:lead_ingot_from_blasting_deepslate_lead_ore",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/lead_ingot_from_blasting_deepslate_lead_ore.json",
+      "type": "minecraft:blasting",
+      "role": "conversion",
+      "references": [
+        "cgs:deepslate_lead_ore",
+        "cgs:lead_ingot"
+      ],
+      "matched_inputs": [
+        "cgs:deepslate_lead_ore"
+      ],
+      "matched_outputs": [
+        "cgs:lead_ingot"
+      ],
+      "all_outputs": [
+        "cgs:lead_ingot"
+      ]
+    },
+    {
+      "id": "cgs:lead_ingot_from_blasting_lead_ore",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/lead_ingot_from_blasting_lead_ore.json",
+      "type": "minecraft:blasting",
+      "role": "conversion",
+      "references": [
+        "cgs:lead_ingot",
+        "cgs:lead_ore"
+      ],
+      "matched_inputs": [
+        "cgs:lead_ore"
+      ],
+      "matched_outputs": [
+        "cgs:lead_ingot"
+      ],
+      "all_outputs": [
+        "cgs:lead_ingot"
+      ]
+    },
+    {
+      "id": "cgs:lead_ingot_from_blasting_raw_lead",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/lead_ingot_from_blasting_raw_lead.json",
+      "type": "minecraft:blasting",
+      "role": "conversion",
+      "references": [
+        "cgs:lead_ingot",
+        "cgs:raw_lead"
+      ],
+      "matched_inputs": [
+        "cgs:raw_lead"
+      ],
+      "matched_outputs": [
+        "cgs:lead_ingot"
+      ],
+      "all_outputs": [
+        "cgs:lead_ingot"
+      ]
+    },
+    {
+      "id": "cgs:lead_ingot_from_lead_nugget",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/lead_ingot_from_lead_nugget.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "conversion",
+      "references": [
+        "cgs:lead_ingot",
+        "cgs:lead_nugget"
+      ],
+      "matched_inputs": [
+        "cgs:lead_nugget"
+      ],
+      "matched_outputs": [
+        "cgs:lead_ingot"
+      ],
+      "all_outputs": [
+        "cgs:lead_ingot"
+      ]
+    },
+    {
+      "id": "cgs:lead_ingot_from_smelting_crushed_raw_lead",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/lead_ingot_from_smelting_crushed_raw_lead.json",
+      "type": "minecraft:smelting",
+      "role": "producer",
+      "references": [
+        "cgs:lead_ingot"
+      ],
+      "matched_inputs": [],
+      "matched_outputs": [
+        "cgs:lead_ingot"
+      ],
+      "all_outputs": [
+        "cgs:lead_ingot"
+      ]
+    },
+    {
+      "id": "cgs:lead_ingot_from_smelting_deepslate_lead_ore",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/lead_ingot_from_smelting_deepslate_lead_ore.json",
+      "type": "minecraft:smelting",
+      "role": "conversion",
+      "references": [
+        "cgs:deepslate_lead_ore",
+        "cgs:lead_ingot"
+      ],
+      "matched_inputs": [
+        "cgs:deepslate_lead_ore"
+      ],
+      "matched_outputs": [
+        "cgs:lead_ingot"
+      ],
+      "all_outputs": [
+        "cgs:lead_ingot"
+      ]
+    },
+    {
+      "id": "cgs:lead_ingot_from_smelting_lead_ore",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/lead_ingot_from_smelting_lead_ore.json",
+      "type": "minecraft:smelting",
+      "role": "conversion",
+      "references": [
+        "cgs:lead_ingot",
+        "cgs:lead_ore"
+      ],
+      "matched_inputs": [
+        "cgs:lead_ore"
+      ],
+      "matched_outputs": [
+        "cgs:lead_ingot"
+      ],
+      "all_outputs": [
+        "cgs:lead_ingot"
+      ]
+    },
+    {
+      "id": "cgs:lead_ingot_from_smelting_raw_lead",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/lead_ingot_from_smelting_raw_lead.json",
+      "type": "minecraft:smelting",
+      "role": "conversion",
+      "references": [
+        "cgs:lead_ingot",
+        "cgs:raw_lead"
+      ],
+      "matched_inputs": [
+        "cgs:raw_lead"
+      ],
+      "matched_outputs": [
+        "cgs:lead_ingot"
+      ],
+      "all_outputs": [
+        "cgs:lead_ingot"
+      ]
+    },
+    {
+      "id": "cgs:lead_nugget",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/lead_nugget.json",
+      "type": "minecraft:crafting_shapeless",
+      "role": "conversion",
+      "references": [
+        "cgs:lead_ingot",
+        "cgs:lead_nugget"
+      ],
+      "matched_inputs": [
+        "cgs:lead_ingot"
+      ],
+      "matched_outputs": [
+        "cgs:lead_nugget"
+      ],
+      "all_outputs": [
+        "cgs:lead_nugget"
+      ]
+    },
+    {
+      "id": "cgs:ore_vein_type/lead",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipes/ore_vein_type/lead.json",
+      "type": "createoreexcavation:vein",
+      "role": "consumer",
+      "references": [
+        "cgs:raw_lead"
+      ],
+      "matched_inputs": [
+        "cgs:raw_lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": []
+    },
+    {
+      "id": "cgs:paper_cartridge",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/paper_cartridge.json",
+      "type": "minecraft:crafting_shapeless",
+      "role": "consumer",
+      "references": [
+        "c:nuggets/lead"
+      ],
+      "matched_inputs": [
+        "c:nuggets/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "cgs:paper_cartridge"
+      ]
+    },
+    {
+      "id": "cgs:paper_shot",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/paper_shot.json",
+      "type": "minecraft:crafting_shapeless",
+      "role": "consumer",
+      "references": [
+        "cgs:lead_balls"
+      ],
+      "matched_inputs": [
+        "cgs:lead_balls"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "cgs:paper_shot"
+      ]
+    },
+    {
+      "id": "cgs:raw_lead",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/raw_lead.json",
+      "type": "minecraft:crafting_shapeless",
+      "role": "conversion",
+      "references": [
+        "cgs:raw_lead",
+        "cgs:raw_lead_block"
+      ],
+      "matched_inputs": [
+        "cgs:raw_lead_block"
+      ],
+      "matched_outputs": [
+        "cgs:raw_lead"
+      ],
+      "all_outputs": [
+        "cgs:raw_lead"
+      ]
+    },
+    {
+      "id": "cgs:raw_lead_block_from_raw_lead",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/raw_lead_block_from_raw_lead.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "conversion",
+      "references": [
+        "cgs:raw_lead",
+        "cgs:raw_lead_block"
+      ],
+      "matched_inputs": [
+        "cgs:raw_lead"
+      ],
+      "matched_outputs": [
+        "cgs:raw_lead_block"
+      ],
+      "all_outputs": [
+        "cgs:raw_lead_block"
+      ]
+    },
+    {
+      "id": "cgs:sequenced_assembly/paper_cartridge",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/sequenced_assembly/paper_cartridge.json",
+      "type": "create:sequenced_assembly",
+      "role": "consumer",
+      "references": [
+        "c:nuggets/lead"
+      ],
+      "matched_inputs": [
+        "c:nuggets/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "cgs:paper_cartridge",
+        "minecraft:paper"
+      ]
+    },
+    {
+      "id": "cgs:sequenced_assembly/paper_shot",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/sequenced_assembly/paper_shot.json",
+      "type": "create:sequenced_assembly",
+      "role": "consumer",
+      "references": [
+        "cgs:lead_balls"
+      ],
+      "matched_inputs": [
+        "cgs:lead_balls"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "cgs:paper_shot",
+        "minecraft:paper"
+      ]
+    },
+    {
+      "id": "cgs:sequenced_assembly/revolver_round",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/sequenced_assembly/revolver_round.json",
+      "type": "create:sequenced_assembly",
+      "role": "consumer",
+      "references": [
+        "c:nuggets/lead"
+      ],
+      "matched_inputs": [
+        "c:nuggets/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "cgs:round_revolver",
+        "cgs:round_revolver_blank"
+      ]
+    },
+    {
+      "id": "cgs:sequenced_assembly/revolver_round_piercing",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/sequenced_assembly/revolver_round_piercing.json",
+      "type": "create:sequenced_assembly",
+      "role": "consumer",
+      "references": [
+        "c:nuggets/lead"
+      ],
+      "matched_inputs": [
+        "c:nuggets/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "cgs:round_revolver_blank",
+        "cgs:round_revolver_piercing"
+      ]
+    },
+    {
+      "id": "cgs:sequenced_assembly/round_gatling",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/sequenced_assembly/round_gatling.json",
+      "type": "create:sequenced_assembly",
+      "role": "consumer",
+      "references": [
+        "c:nuggets/lead"
+      ],
+      "matched_inputs": [
+        "c:nuggets/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "cgs:round_gatling",
+        "cgs:round_gatling_blank"
+      ]
+    },
+    {
+      "id": "cgs:sequenced_assembly/shotgun_round",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipe/sequenced_assembly/shotgun_round.json",
+      "type": "create:sequenced_assembly",
+      "role": "consumer",
+      "references": [
+        "cgs:lead_balls"
+      ],
+      "matched_inputs": [
+        "cgs:lead_balls"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "cgs:round_shotgun",
+        "cgs:shell_shotgun"
+      ]
+    },
+    {
+      "id": "cgs:smelting/crushed_lead_furn",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "resource": "data/cgs/recipes/smelting/crushed_lead_furn.json",
+      "type": "minecraft:smelting",
+      "role": "producer",
+      "references": [
+        "cgs:lead_ingot"
+      ],
+      "matched_inputs": [],
+      "matched_outputs": [
+        "cgs:lead_ingot"
+      ],
+      "all_outputs": [
+        "cgs:lead_ingot"
+      ]
+    },
+    {
+      "id": "create:crushing/galena",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/create/recipe/crushing/galena.json",
+      "type": "create:crushing",
+      "role": "producer",
+      "references": [
+        "tfmg:lead_nugget"
+      ],
+      "matched_inputs": [],
+      "matched_outputs": [
+        "tfmg:lead_nugget"
+      ],
+      "all_outputs": [
+        "create:crushed_raw_lead",
+        "tfmg:lead_nugget"
+      ]
+    },
+    {
+      "id": "create:crushing/lead_ore",
+      "source": "mods/create-1.21.1-6.0.10.jar",
+      "resource": "data/create/recipe/crushing/lead_ore.json",
+      "type": "create:crushing",
+      "role": "consumer",
+      "references": [
+        "c:ores/lead"
+      ],
+      "matched_inputs": [
+        "c:ores/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "create:crushed_raw_lead",
+        "create:experience_nugget"
+      ]
+    },
+    {
+      "id": "create:crushing/raw_lead",
+      "source": "mods/create-1.21.1-6.0.10.jar",
+      "resource": "data/create/recipe/crushing/raw_lead.json",
+      "type": "create:crushing",
+      "role": "consumer",
+      "references": [
+        "c:raw_materials/lead"
+      ],
+      "matched_inputs": [
+        "c:raw_materials/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "create:crushed_raw_lead",
+        "create:experience_nugget"
+      ]
+    },
+    {
+      "id": "create:crushing/raw_lead_block",
+      "source": "mods/create-1.21.1-6.0.10.jar",
+      "resource": "data/create/recipe/crushing/raw_lead_block.json",
+      "type": "create:crushing",
+      "role": "consumer",
+      "references": [
+        "c:storage_blocks/raw_lead"
+      ],
+      "matched_inputs": [
+        "c:storage_blocks/raw_lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "create:crushed_raw_lead",
+        "create:experience_nugget"
+      ]
+    },
+    {
+      "id": "create:cutting/compat/immersiveengineering/wire_lead",
+      "source": "mods/create-1.21.1-6.0.10.jar",
+      "resource": "data/create/recipe/cutting/compat/immersiveengineering/wire_lead.json",
+      "type": "create:cutting",
+      "role": "consumer",
+      "references": [
+        "c:plates/lead"
+      ],
+      "matched_inputs": [
+        "c:plates/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "immersiveengineering:wire_lead"
+      ]
+    },
+    {
+      "id": "create:pressing/compat/immersiveengineering/plate_lead",
+      "source": "mods/create-1.21.1-6.0.10.jar",
+      "resource": "data/create/recipe/pressing/compat/immersiveengineering/plate_lead.json",
+      "type": "create:pressing",
+      "role": "consumer",
+      "references": [
+        "c:ingots/lead"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "immersiveengineering:plate_lead"
+      ]
+    },
+    {
+      "id": "createaddition:compat/immersiveengineering/item_application/leaded_concrete",
+      "source": "mods/createaddition-1.6.0.jar",
+      "resource": "data/createaddition/recipe/compat/immersiveengineering/item_application/leaded_concrete.json",
+      "type": "create:item_application",
+      "role": "consumer",
+      "references": [
+        "c:plates/lead"
+      ],
+      "matched_inputs": [
+        "c:plates/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "immersiveengineering:concrete_leaded"
+      ]
+    },
+    {
+      "id": "createaddition:compat/immersiveengineering/rolling/lead_plate",
+      "source": "mods/createaddition-1.6.0.jar",
+      "resource": "data/createaddition/recipe/compat/immersiveengineering/rolling/lead_plate.json",
+      "type": "createaddition:rolling",
+      "role": "consumer",
+      "references": [
+        "c:plates/lead"
+      ],
+      "matched_inputs": [
+        "c:plates/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "immersiveengineering:wire_lead"
+      ]
+    },
+    {
+      "id": "occultism:crushing/lead_dust_from_ingot",
+      "source": "mods/occultism-1.21.1-neoforge-1.224.5.jar",
+      "resource": "data/occultism/recipe/crushing/lead_dust_from_ingot.json",
+      "type": "occultism:crushing",
+      "role": "consumer",
+      "references": [
+        "c:ingots/lead"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "c:dusts/lead",
+        "occultism:tag"
+      ]
+    },
+    {
+      "id": "occultism:crushing/lead_dust_from_ore",
+      "source": "mods/occultism-1.21.1-neoforge-1.224.5.jar",
+      "resource": "data/occultism/recipe/crushing/lead_dust_from_ore.json",
+      "type": "occultism:crushing",
+      "role": "consumer",
+      "references": [
+        "c:ores/lead"
+      ],
+      "matched_inputs": [
+        "c:ores/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "c:dusts/lead",
+        "occultism:tag"
+      ]
+    },
+    {
+      "id": "occultism:crushing/lead_dust_from_raw",
+      "source": "mods/occultism-1.21.1-neoforge-1.224.5.jar",
+      "resource": "data/occultism/recipe/crushing/lead_dust_from_raw.json",
+      "type": "occultism:crushing",
+      "role": "consumer",
+      "references": [
+        "c:raw_materials/lead"
+      ],
+      "matched_inputs": [
+        "c:raw_materials/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "c:dusts/lead",
+        "occultism:tag"
+      ]
+    },
+    {
+      "id": "occultism:crushing/lead_dust_from_raw_block",
+      "source": "mods/occultism-1.21.1-neoforge-1.224.5.jar",
+      "resource": "data/occultism/recipe/crushing/lead_dust_from_raw_block.json",
+      "type": "occultism:crushing",
+      "role": "consumer",
+      "references": [
+        "c:storage_blocks/raw_lead"
+      ],
+      "matched_inputs": [
+        "c:storage_blocks/raw_lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "c:dusts/lead",
+        "occultism:tag"
+      ]
+    },
+    {
+      "id": "occultism:miner/eldritch/raw_lead",
+      "source": "mods/occultism-1.21.1-neoforge-1.224.5.jar",
+      "resource": "data/occultism/recipe/miner/eldritch/raw_lead.json",
+      "type": "occultism:miner",
+      "role": "producer",
+      "references": [
+        "c:storage_blocks/raw_lead"
+      ],
+      "matched_inputs": [],
+      "matched_outputs": [
+        "c:storage_blocks/raw_lead"
+      ],
+      "all_outputs": [
+        "c:storage_blocks/raw_lead",
+        "occultism:weighted_tag"
+      ]
+    },
+    {
+      "id": "occultism:miner/ores/lead_ore",
+      "source": "mods/occultism-1.21.1-neoforge-1.224.5.jar",
+      "resource": "data/occultism/recipe/miner/ores/lead_ore.json",
+      "type": "occultism:miner",
+      "role": "producer",
+      "references": [
+        "c:ores/lead"
+      ],
+      "matched_inputs": [],
+      "matched_outputs": [
+        "c:ores/lead"
+      ],
+      "all_outputs": [
+        "c:ores/lead",
+        "occultism:weighted_tag"
+      ]
+    },
+    {
+      "id": "productivemetalworks:melting/ingots/lead",
+      "source": "mods/productivemetalworks-1.21.1-1.15.1.jar",
+      "resource": "data/productivemetalworks/recipe/melting/ingots/lead.json",
+      "type": "productivemetalworks:item_melting",
+      "role": "consumer",
+      "references": [
+        "c:ingots/lead"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "productivemetalworks:molten_lead"
+      ]
+    },
+    {
+      "id": "productivemetalworks:melting/nuggets/lead",
+      "source": "mods/productivemetalworks-1.21.1-1.15.1.jar",
+      "resource": "data/productivemetalworks/recipe/melting/nuggets/lead.json",
+      "type": "productivemetalworks:item_melting",
+      "role": "consumer",
+      "references": [
+        "c:nuggets/lead"
+      ],
+      "matched_inputs": [
+        "c:nuggets/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "productivemetalworks:molten_lead"
+      ]
+    },
+    {
+      "id": "productivemetalworks:melting/ores/lead",
+      "source": "mods/productivemetalworks-1.21.1-1.15.1.jar",
+      "resource": "data/productivemetalworks/recipe/melting/ores/lead.json",
+      "type": "productivemetalworks:item_melting",
+      "role": "consumer",
+      "references": [
+        "c:ores/lead"
+      ],
+      "matched_inputs": [
+        "c:ores/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "productivemetalworks:molten_lead"
+      ]
+    },
+    {
+      "id": "productivemetalworks:melting/plates/lead",
+      "source": "mods/productivemetalworks-1.21.1-1.15.1.jar",
+      "resource": "data/productivemetalworks/recipe/melting/plates/lead.json",
+      "type": "productivemetalworks:item_melting",
+      "role": "consumer",
+      "references": [
+        "c:plates/lead"
+      ],
+      "matched_inputs": [
+        "c:plates/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "productivemetalworks:molten_lead"
+      ]
+    },
+    {
+      "id": "productivemetalworks:melting/raw_materials/lead",
+      "source": "mods/productivemetalworks-1.21.1-1.15.1.jar",
+      "resource": "data/productivemetalworks/recipe/melting/raw_materials/lead.json",
+      "type": "productivemetalworks:item_melting",
+      "role": "consumer",
+      "references": [
+        "c:raw_materials/lead"
+      ],
+      "matched_inputs": [
+        "c:raw_materials/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "productivemetalworks:molten_lead"
+      ]
+    },
+    {
+      "id": "productivemetalworks:melting/storage_blocks/lead",
+      "source": "mods/productivemetalworks-1.21.1-1.15.1.jar",
+      "resource": "data/productivemetalworks/recipe/melting/storage_blocks/lead.json",
+      "type": "productivemetalworks:item_melting",
+      "role": "consumer",
+      "references": [
+        "c:storage_blocks/lead"
+      ],
+      "matched_inputs": [
+        "c:storage_blocks/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "productivemetalworks:molten_lead"
+      ]
+    },
+    {
+      "id": "productivemetalworks:melting/storage_blocks/raw_lead",
+      "source": "mods/productivemetalworks-1.21.1-1.15.1.jar",
+      "resource": "data/productivemetalworks/recipe/melting/storage_blocks/raw_lead.json",
+      "type": "productivemetalworks:item_melting",
+      "role": "consumer",
+      "references": [
+        "c:storage_blocks/raw_lead"
+      ],
+      "matched_inputs": [
+        "c:storage_blocks/raw_lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "productivemetalworks:molten_lead"
+      ]
+    },
+    {
+      "id": "supplementaries:cannonball",
+      "source": "mods/supplementaries-1.21.1-4.0.2-neoforge.jar",
+      "resource": "data/supplementaries/recipe/cannonball.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "consumer",
+      "references": [
+        "c:storage_blocks/lead"
+      ],
+      "matched_inputs": [
+        "c:storage_blocks/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "supplementaries:cannonball"
+      ]
+    },
+    {
+      "id": "supplementaries:cannonball_2",
+      "source": "mods/supplementaries-1.21.1-4.0.2-neoforge.jar",
+      "resource": "data/supplementaries/recipe/cannonball_2.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "consumer",
+      "references": [
+        "c:storage_blocks/lead"
+      ],
+      "matched_inputs": [
+        "c:storage_blocks/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "supplementaries:cannonball"
+      ]
+    },
+    {
+      "id": "tfmg:blasting/lead_ingot_blasting",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/blasting/lead_ingot_blasting.json",
+      "type": "minecraft:blasting",
+      "role": "conversion",
+      "references": [
+        "tfmg:lead_ingot",
+        "tfmg:raw_lead"
+      ],
+      "matched_inputs": [
+        "tfmg:raw_lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_ingot"
+      ],
+      "all_outputs": [
+        "tfmg:lead_ingot"
+      ]
+    },
+    {
+      "id": "tfmg:blasting/lead_ingot_from_crushed_blasting",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/blasting/lead_ingot_from_crushed_blasting.json",
+      "type": "minecraft:blasting",
+      "role": "producer",
+      "references": [
+        "tfmg:lead_ingot"
+      ],
+      "matched_inputs": [],
+      "matched_outputs": [
+        "tfmg:lead_ingot"
+      ],
+      "all_outputs": [
+        "tfmg:lead_ingot"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/accumulator",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/accumulator.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "consumer",
+      "references": [
+        "c:plates/lead",
+        "c:storage_blocks/lead"
+      ],
+      "matched_inputs": [
+        "c:plates/lead",
+        "c:storage_blocks/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "tfmg:accumulator"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/cast_iron_chemical_vat",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/cast_iron_chemical_vat.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "consumer",
+      "references": [
+        "c:plates/lead"
+      ],
+      "matched_inputs": [
+        "c:plates/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "tfmg:cast_iron_chemical_vat"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/converter",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/converter.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "consumer",
+      "references": [
+        "c:plates/lead"
+      ],
+      "matched_inputs": [
+        "c:plates/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "tfmg:converter"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/electrical_switch",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/electrical_switch.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "consumer",
+      "references": [
+        "c:plates/lead"
+      ],
+      "matched_inputs": [
+        "c:plates/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "tfmg:electrical_switch"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/electrode_holder",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/electrode_holder.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "consumer",
+      "references": [
+        "c:plates/lead"
+      ],
+      "matched_inputs": [
+        "c:plates/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "tfmg:electrode_holder"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/lead_axe",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/lead_axe.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "conversion",
+      "references": [
+        "c:ingots/lead",
+        "tfmg:lead_axe"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_axe"
+      ],
+      "all_outputs": [
+        "tfmg:lead_axe"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/lead_block_from_compacting",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/lead_block_from_compacting.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "conversion",
+      "references": [
+        "c:ingots/lead",
+        "tfmg:lead_block"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_block"
+      ],
+      "all_outputs": [
+        "tfmg:lead_block"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/lead_flywheel",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/lead_flywheel.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "conversion",
+      "references": [
+        "c:ingots/lead",
+        "tfmg:lead_flywheel"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_flywheel"
+      ],
+      "all_outputs": [
+        "tfmg:lead_flywheel"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/lead_frame",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/lead_frame.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "conversion",
+      "references": [
+        "c:nuggets/lead",
+        "tfmg:lead_frame"
+      ],
+      "matched_inputs": [
+        "c:nuggets/lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_frame"
+      ],
+      "all_outputs": [
+        "tfmg:lead_frame"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/lead_hoe",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/lead_hoe.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "conversion",
+      "references": [
+        "c:ingots/lead",
+        "tfmg:lead_hoe"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_hoe"
+      ],
+      "all_outputs": [
+        "tfmg:lead_hoe"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/lead_ingot_from_compacting",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/lead_ingot_from_compacting.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "conversion",
+      "references": [
+        "c:nuggets/lead",
+        "tfmg:lead_ingot"
+      ],
+      "matched_inputs": [
+        "c:nuggets/lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_ingot"
+      ],
+      "all_outputs": [
+        "tfmg:lead_ingot"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/lead_ingot_from_decompacting",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/lead_ingot_from_decompacting.json",
+      "type": "minecraft:crafting_shapeless",
+      "role": "conversion",
+      "references": [
+        "c:storage_blocks/lead",
+        "tfmg:lead_ingot"
+      ],
+      "matched_inputs": [
+        "c:storage_blocks/lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_ingot"
+      ],
+      "all_outputs": [
+        "tfmg:lead_ingot"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/lead_nugget_from_decompacting",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/lead_nugget_from_decompacting.json",
+      "type": "minecraft:crafting_shapeless",
+      "role": "conversion",
+      "references": [
+        "c:ingots/lead",
+        "tfmg:lead_nugget"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_nugget"
+      ],
+      "all_outputs": [
+        "tfmg:lead_nugget"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/lead_pickaxe",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/lead_pickaxe.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "conversion",
+      "references": [
+        "c:ingots/lead",
+        "tfmg:lead_pickaxe"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_pickaxe"
+      ],
+      "all_outputs": [
+        "tfmg:lead_pickaxe"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/lead_shovel",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/lead_shovel.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "conversion",
+      "references": [
+        "c:ingots/lead",
+        "tfmg:lead_shovel"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_shovel"
+      ],
+      "all_outputs": [
+        "tfmg:lead_shovel"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/lead_sword",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/lead_sword.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "conversion",
+      "references": [
+        "c:ingots/lead",
+        "tfmg:lead_sword"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_sword"
+      ],
+      "all_outputs": [
+        "tfmg:lead_sword"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/lead_truss",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/lead_truss.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "conversion",
+      "references": [
+        "c:nuggets/lead",
+        "tfmg:lead_truss"
+      ],
+      "matched_inputs": [
+        "c:nuggets/lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_truss"
+      ],
+      "all_outputs": [
+        "tfmg:lead_truss"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/raw_lead",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/raw_lead.json",
+      "type": "minecraft:crafting_shapeless",
+      "role": "conversion",
+      "references": [
+        "tfmg:raw_lead",
+        "tfmg:raw_lead_block"
+      ],
+      "matched_inputs": [
+        "tfmg:raw_lead_block"
+      ],
+      "matched_outputs": [
+        "tfmg:raw_lead"
+      ],
+      "all_outputs": [
+        "tfmg:raw_lead"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/raw_lead_block",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/raw_lead_block.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "conversion",
+      "references": [
+        "tfmg:raw_lead",
+        "tfmg:raw_lead_block"
+      ],
+      "matched_inputs": [
+        "tfmg:raw_lead"
+      ],
+      "matched_outputs": [
+        "tfmg:raw_lead_block"
+      ],
+      "all_outputs": [
+        "tfmg:raw_lead_block"
+      ]
+    },
+    {
+      "id": "tfmg:crafting/materials/steel_distillation_controller",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/crafting/materials/steel_distillation_controller.json",
+      "type": "minecraft:crafting_shaped",
+      "role": "consumer",
+      "references": [
+        "c:plates/lead"
+      ],
+      "matched_inputs": [
+        "c:plates/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "tfmg:steel_distillation_controller"
+      ]
+    },
+    {
+      "id": "tfmg:lead_bars_from_ingots_lead_stonecutting",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/lead_bars_from_ingots_lead_stonecutting.json",
+      "type": "minecraft:stonecutting",
+      "role": "conversion",
+      "references": [
+        "c:ingots/lead",
+        "tfmg:lead_bars"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_bars"
+      ],
+      "all_outputs": [
+        "tfmg:lead_bars"
+      ]
+    },
+    {
+      "id": "tfmg:lead_ladder_from_ingots_lead_stonecutting",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/lead_ladder_from_ingots_lead_stonecutting.json",
+      "type": "minecraft:stonecutting",
+      "role": "conversion",
+      "references": [
+        "c:ingots/lead",
+        "tfmg:lead_ladder"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_ladder"
+      ],
+      "all_outputs": [
+        "tfmg:lead_ladder"
+      ]
+    },
+    {
+      "id": "tfmg:pressing/lead_ingot",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/pressing/lead_ingot.json",
+      "type": "create:pressing",
+      "role": "conversion",
+      "references": [
+        "c:ingots/lead",
+        "tfmg:lead_sheet"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_sheet"
+      ],
+      "all_outputs": [
+        "tfmg:lead_sheet"
+      ]
+    },
+    {
+      "id": "tfmg:sequenced_assembly/steel_mechanism",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/sequenced_assembly/steel_mechanism.json",
+      "type": "create:sequenced_assembly",
+      "role": "consumer",
+      "references": [
+        "tfmg:lead_sheet"
+      ],
+      "matched_inputs": [
+        "tfmg:lead_sheet"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "minecraft:compass",
+        "tfmg:steel_ingot",
+        "tfmg:steel_mechanism",
+        "tfmg:unfinished_steel_mechanism"
+      ]
+    },
+    {
+      "id": "tfmg:smelting/lead_ingot",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/smelting/lead_ingot.json",
+      "type": "minecraft:smelting",
+      "role": "conversion",
+      "references": [
+        "tfmg:lead_ingot",
+        "tfmg:raw_lead"
+      ],
+      "matched_inputs": [
+        "tfmg:raw_lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_ingot"
+      ],
+      "all_outputs": [
+        "tfmg:lead_ingot"
+      ]
+    },
+    {
+      "id": "tfmg:smelting/lead_ingot_blasting",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/smelting/lead_ingot_blasting.json",
+      "type": "minecraft:smelting",
+      "role": "conversion",
+      "references": [
+        "tfmg:lead_ingot",
+        "tfmg:raw_lead"
+      ],
+      "matched_inputs": [
+        "tfmg:raw_lead"
+      ],
+      "matched_outputs": [
+        "tfmg:lead_ingot"
+      ],
+      "all_outputs": [
+        "tfmg:lead_ingot"
+      ]
+    },
+    {
+      "id": "tfmg:smelting/lead_ingot_from_crushed_blasting",
+      "source": "mods/tfmg-1.2.0.jar",
+      "resource": "data/tfmg/recipe/smelting/lead_ingot_from_crushed_blasting.json",
+      "type": "minecraft:smelting",
+      "role": "producer",
+      "references": [
+        "tfmg:lead_ingot"
+      ],
+      "matched_inputs": [],
+      "matched_outputs": [
+        "tfmg:lead_ingot"
+      ],
+      "all_outputs": [
+        "tfmg:lead_ingot"
+      ]
+    },
+    {
+      "id": "theurgy:incubation/ingots_lead_from_alchemical_sulfur_lead",
+      "source": "mods/theurgy-1.21.1-neoforge-1.78.0.jar",
+      "resource": "data/theurgy/recipe/incubation/ingots_lead_from_alchemical_sulfur_lead.json",
+      "type": "theurgy:incubation",
+      "role": "producer",
+      "references": [
+        "c:ingots/lead"
+      ],
+      "matched_inputs": [],
+      "matched_outputs": [
+        "c:ingots/lead"
+      ],
+      "all_outputs": [
+        "c:ingots/lead",
+        "theurgy:tag"
+      ]
+    },
+    {
+      "id": "theurgy:liquefaction/alchemical_sulfur_lead_from_ingots_lead",
+      "source": "mods/theurgy-1.21.1-neoforge-1.78.0.jar",
+      "resource": "data/theurgy/recipe/liquefaction/alchemical_sulfur_lead_from_ingots_lead.json",
+      "type": "theurgy:liquefaction",
+      "role": "consumer",
+      "references": [
+        "c:ingots/lead"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "theurgy:alchemical_sulfur_lead",
+        "theurgy:item"
+      ]
+    },
+    {
+      "id": "theurgy:liquefaction/alchemical_sulfur_lead_from_ores_lead",
+      "source": "mods/theurgy-1.21.1-neoforge-1.78.0.jar",
+      "resource": "data/theurgy/recipe/liquefaction/alchemical_sulfur_lead_from_ores_lead.json",
+      "type": "theurgy:liquefaction",
+      "role": "consumer",
+      "references": [
+        "c:ores/lead"
+      ],
+      "matched_inputs": [
+        "c:ores/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "theurgy:alchemical_sulfur_lead",
+        "theurgy:item"
+      ]
+    },
+    {
+      "id": "theurgy:liquefaction/alchemical_sulfur_lead_from_raw_materials_lead",
+      "source": "mods/theurgy-1.21.1-neoforge-1.78.0.jar",
+      "resource": "data/theurgy/recipe/liquefaction/alchemical_sulfur_lead_from_raw_materials_lead.json",
+      "type": "theurgy:liquefaction",
+      "role": "consumer",
+      "references": [
+        "c:raw_materials/lead"
+      ],
+      "matched_inputs": [
+        "c:raw_materials/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "theurgy:alchemical_sulfur_lead",
+        "theurgy:item"
+      ]
+    },
+    {
+      "id": "theurgy:reformation/alchemical_sulfur_lead_from_alchemical_niter_metals_common",
+      "source": "mods/theurgy-1.21.1-neoforge-1.78.0.jar",
+      "resource": "data/theurgy/recipe/reformation/alchemical_sulfur_lead_from_alchemical_niter_metals_common.json",
+      "type": "theurgy:reformation",
+      "role": "consumer",
+      "references": [
+        "c:ingots/lead"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "theurgy:alchemical_sulfur_lead",
+        "theurgy:item"
+      ]
+    },
+    {
+      "id": "theurgy:reformation/alchemical_sulfur_lead_from_alchemical_sulfurs_metals_common",
+      "source": "mods/theurgy-1.21.1-neoforge-1.78.0.jar",
+      "resource": "data/theurgy/recipe/reformation/alchemical_sulfur_lead_from_alchemical_sulfurs_metals_common.json",
+      "type": "theurgy:reformation",
+      "role": "consumer",
+      "references": [
+        "c:ingots/lead"
+      ],
+      "matched_inputs": [
+        "c:ingots/lead"
+      ],
+      "matched_outputs": [],
+      "all_outputs": [
+        "theurgy:alchemical_sulfur_lead",
+        "theurgy:item"
+      ]
+    }
+  ],
+  "worldgen": [
+    {
+      "resource": "data/cgs/neoforge/biome_modifier/add_lead_ore.json",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "namespace": "cgs",
+      "type": "neoforge:add_features",
+      "references": [
+        "cgs:lead_ore_placed"
+      ],
+      "definition": {
+        "type": "neoforge:add_features",
+        "biomes": "#minecraft:is_overworld",
+        "features": "cgs:lead_ore_placed",
+        "step": "underground_ores"
+      }
+    },
+    {
+      "resource": "data/cgs/worldgen/configured_feature/lead_ore.json",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "namespace": "cgs",
+      "type": "minecraft:ore",
+      "references": [
+        "cgs:deepslate_lead_ore",
+        "cgs:lead_ore"
+      ],
+      "definition": {
+        "type": "minecraft:ore",
+        "config": {
+          "discard_chance_on_air_exposure": 0.0,
+          "size": 9,
+          "targets": [
+            {
+              "state": {
+                "Name": "cgs:lead_ore"
+              },
+              "target": {
+                "predicate_type": "minecraft:tag_match",
+                "tag": "minecraft:stone_ore_replaceables"
+              }
+            },
+            {
+              "state": {
+                "Name": "cgs:deepslate_lead_ore"
+              },
+              "target": {
+                "predicate_type": "minecraft:tag_match",
+                "tag": "minecraft:deepslate_ore_replaceables"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": "data/cgs/worldgen/placed_feature/lead_ore_placed.json",
+      "source": "mods/create-gunsmithing-1.21.1-1.4.9.jar",
+      "namespace": "cgs",
+      "type": "unknown",
+      "references": [
+        "cgs:lead_ore"
+      ],
+      "definition": {
+        "feature": "cgs:lead_ore",
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 12
+          },
+          {
+            "type": "minecraft:in_square"
+          },
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:uniform",
+              "max_inclusive": {
+                "absolute": 80
+              },
+              "min_inclusive": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "minecraft:biome"
+          }
+        ]
+      }
+    },
+    {
+      "resource": "data/tfmg/neoforge/biome_modifier/lead_ore.json",
+      "source": "mods/tfmg-1.2.0.jar",
+      "namespace": "tfmg",
+      "type": "neoforge:add_features",
+      "references": [
+        "tfmg:lead_ore"
+      ],
+      "definition": {
+        "type": "neoforge:add_features",
+        "biomes": "#minecraft:is_overworld",
+        "features": "tfmg:lead_ore",
+        "step": "underground_ores"
+      }
+    },
+    {
+      "resource": "data/tfmg/worldgen/configured_feature/lead_ore.json",
+      "source": "mods/tfmg-1.2.0.jar",
+      "namespace": "tfmg",
+      "type": "minecraft:ore",
+      "references": [
+        "tfmg:deepslate_lead_ore",
+        "tfmg:lead_ore"
+      ],
+      "definition": {
+        "type": "minecraft:ore",
+        "config": {
+          "discard_chance_on_air_exposure": 0.0,
+          "size": 12,
+          "targets": [
+            {
+              "state": {
+                "Name": "tfmg:lead_ore"
+              },
+              "target": {
+                "predicate_type": "minecraft:tag_match",
+                "tag": "minecraft:stone_ore_replaceables"
+              }
+            },
+            {
+              "state": {
+                "Name": "tfmg:deepslate_lead_ore"
+              },
+              "target": {
+                "predicate_type": "minecraft:tag_match",
+                "tag": "minecraft:deepslate_ore_replaceables"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": "data/tfmg/worldgen/placed_feature/lead_ore.json",
+      "source": "mods/tfmg-1.2.0.jar",
+      "namespace": "tfmg",
+      "type": "unknown",
+      "references": [
+        "tfmg:lead_ore"
+      ],
+      "definition": {
+        "feature": "tfmg:lead_ore",
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 5
+          },
+          {
+            "type": "minecraft:in_square"
+          },
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:uniform",
+              "max_inclusive": {
+                "absolute": 80
+              },
+              "min_inclusive": {
+                "absolute": -15
+              }
+            }
+          },
+          {
+            "type": "create:config_filter"
+          }
+        ]
+      }
+    }
+  ],
+  "config_references": [
+    {
+      "file": "config/tfmg-server.toml",
+      "matches": [
+        {
+          "line": 12,
+          "text": "lead_flywheel = 0.0"
+        }
+      ]
+    }
+  ],
+  "parse_issues": [],
+  "limitations": [
+    "Recipes and worldgen registered only by Java code are not visible to this static audit.",
+    "A recipe reference proves technical coupling, not that two concrete items are functionally interchangeable.",
+    "Runtime registry and recipe dumps are required before disabling world generation or removing outputs."
+  ],
+  "source_profile": {
+    "name": "NEXVVS Test",
+    "minecraft": "1.21.1",
+    "loader": "neoforge-21.1.264"
+  }
+}

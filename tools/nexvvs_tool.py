@@ -16,6 +16,7 @@ from pathlib import Path, PurePosixPath
 from typing import Any, Iterable
 
 from tools.material_audit import build_material_catalog, markdown_material_report
+from tools.material_focus import build_material_focus, markdown_focus_report
 
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
@@ -542,6 +543,48 @@ def audit_materials(root: Path = REPOSITORY_ROOT) -> int:
     return 0
 
 
+def audit_material_focus(material: str, root: Path = REPOSITORY_ROOT) -> int:
+    project = load_project(root)
+    instance, metadata = verify_dev_instance(root, project)
+    overlay_data = root / project["build"]["overrides_directory"] / "kubejs" / "data"
+    discovered = build_material_catalog(instance / "mods", overlay_data)
+    material_entry = next(
+        (entry for entry in discovered["materials"] if entry["material"] == material),
+        None,
+    )
+    if material_entry is None:
+        raise NexvvsError(f"Material was not discovered in common tags: {material}")
+    report = build_material_focus(
+        material_entry,
+        instance / "mods",
+        overlay_data,
+        instance,
+    )
+    report["source_profile"] = {
+        "name": metadata.get("name"),
+        "minecraft": metadata.get("gameVersion"),
+        "loader": (metadata.get("baseModLoader") or {}).get("name"),
+    }
+    catalog_path = root / "catalog" / "materials" / f"{material}.audit.json"
+    catalog_path.parent.mkdir(parents=True, exist_ok=True)
+    catalog_path.write_text(
+        json.dumps(report, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    documentation_path = root / "docs" / "materials" / f"{material}.md"
+    documentation_path.parent.mkdir(parents=True, exist_ok=True)
+    documentation_path.write_text(markdown_focus_report(report), encoding="utf-8")
+    summary = report["summary"]
+    print(
+        f"MATERIAL {material}: {summary['recipes']} recipes, "
+        f"{summary['worldgen_resources']} worldgen resources, "
+        f"{summary['config_files']} config files"
+    )
+    print(f"WROTE: {catalog_path.relative_to(root)}")
+    print(f"WROTE: {documentation_path.relative_to(root)}")
+    return 0
+
+
 def zip_bytes(archive: zipfile.ZipFile, name: str, data: bytes, mode: int = 0o644) -> None:
     info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
     info.compress_type = zipfile.ZIP_DEFLATED
@@ -629,7 +672,8 @@ def create_parser() -> argparse.ArgumentParser:
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("audit", help="refresh the CurseForge content inventory")
-    subparsers.add_parser("materials", help="audit material forms and common item tags")
+    materials = subparsers.add_parser("materials", help="audit material forms and common item tags")
+    materials.add_argument("material", nargs="?", help="generate a focused audit for one material")
     subparsers.add_parser("validate", help="validate repository-owned content")
     sync = subparsers.add_parser("sync", help="compare or deploy overrides to an instance")
     sync.add_argument("target", choices=["dev"])
@@ -644,7 +688,7 @@ def main(argv: list[str] | None = None) -> int:
         if args.command == "audit":
             return audit_instance()
         if args.command == "materials":
-            return audit_materials()
+            return audit_material_focus(args.material) if args.material else audit_materials()
         if args.command == "validate":
             return 0 if validate_repository() else 1
         if args.command == "sync":

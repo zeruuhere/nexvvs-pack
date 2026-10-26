@@ -21,6 +21,7 @@ Never assume an API, registry ID, recipe type, tag, or mod capability exists. Ve
 - Prefer KubeJS, datapacks, tags, and configuration over modifying mod binaries.
 - Preserve multiplayer compatibility and dedicated-server behavior.
 - Distinguish material equivalence from functional item equivalence.
+- Run `./nexvvs materials <name>` and review concrete recipe and worldgen dependencies before selecting a canonical provider.
 - Record balance decisions and runtime assumptions in `docs/`.
 
 ## Repository ownership

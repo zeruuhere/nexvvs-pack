@@ -18,6 +18,7 @@ from tools.material_audit import (
     resolve_tag,
     TagFragment,
 )
+from tools.material_focus import analyze_recipe, build_material_focus
 
 
 class RepositorySafetyTests(unittest.TestCase):
@@ -158,6 +159,78 @@ class MaterialAuditTests(unittest.TestCase):
             self.assertEqual(tin["material"], "tin")
             self.assertEqual(tin["forms"]["ingot"]["candidate_count"], 2)
             self.assertTrue(tin["forms"]["ingot"]["cross_namespace_conflict"])
+
+
+class MaterialFocusTests(unittest.TestCase):
+    def test_classifies_tagged_recipe_as_conversion(self):
+        recipe = analyze_recipe(
+            "mods/example.jar",
+            "data/example/recipe/tin_ingot.json",
+            {
+                "type": "minecraft:smelting",
+                "ingredient": {"tag": "c:ores/tin"},
+                "result": {"id": "example:tin_ingot"},
+            },
+            "tin",
+            {"example:tin_ingot", "example:tin_ore"},
+            {"c:ores/tin", "c:ingots/tin"},
+            {"example"},
+        )
+
+        self.assertIsNotNone(recipe)
+        self.assertEqual(recipe["role"], "conversion")
+        self.assertEqual(recipe["matched_outputs"], ["example:tin_ingot"])
+
+    def test_builds_focused_recipe_and_worldgen_inventory(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            mods = root / "mods"
+            data = root / "data"
+            instance = root / "instance"
+            mods.mkdir()
+            data.mkdir()
+            (instance / "config").mkdir(parents=True)
+            with ZipFile(mods / "example.jar", "w") as archive:
+                archive.writestr(
+                    "data/example/recipe/tin_ingot.json",
+                    json.dumps(
+                        {
+                            "type": "minecraft:smelting",
+                            "ingredient": {"tag": "c:ores/tin"},
+                            "result": {"id": "example:tin_ingot"},
+                        }
+                    ),
+                )
+                archive.writestr(
+                    "data/example/worldgen/configured_feature/tin_ore.json",
+                    json.dumps(
+                        {
+                            "type": "minecraft:ore",
+                            "config": {"state": {"Name": "example:tin_ore"}},
+                        }
+                    ),
+                )
+            material = {
+                "material": "tin",
+                "forms": {
+                    "ingot": {
+                        "items": ["example:tin_ingot"],
+                        "tags": ["c:ingots/tin"],
+                        "provider_namespaces": ["example"],
+                    },
+                    "ore": {
+                        "items": ["example:tin_ore"],
+                        "tags": ["c:ores/tin"],
+                        "provider_namespaces": ["example"],
+                    },
+                },
+            }
+
+            report = build_material_focus(material, mods, data, instance)
+
+            self.assertEqual(report["summary"]["recipes"], 1)
+            self.assertEqual(report["summary"]["worldgen_resources"], 1)
+            self.assertEqual(report["summary"]["worldgen_namespaces"], ["example"])
 
 
 if __name__ == "__main__":

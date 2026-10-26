@@ -22,6 +22,7 @@ The Git repository contains only NEXVVS-owned integrations and curated configura
 ```bash
 ./nexvvs audit
 ./nexvvs materials
+./nexvvs materials lead
 ./nexvvs validate
 ./nexvvs sync dev
 ./nexvvs sync dev --apply
@@ -31,6 +32,7 @@ python3 -m unittest discover -s tests -v
 
 - `audit` reads CurseForge metadata and refreshes the content lock and mod list. It does not modify the instance.
 - `materials` statically audits material tags inside the installed JARs and refreshes the discovered-material catalog.
+- `materials <name>` creates a focused recipe, worldgen, provider, and configuration report for one discovered material.
 - `validate` checks repository structure plus JSON, TOML, SNBT balance, and JavaScript syntax.
 - `sync dev` compares the curated overrides with the Dev instance. It is a dry run unless `--apply` is supplied.
 - `build` creates a deterministic CurseForge ZIP containing `manifest.json` and `overrides/`.
